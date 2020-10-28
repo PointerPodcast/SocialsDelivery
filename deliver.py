@@ -41,7 +41,7 @@ dict_podcasting_platforms_links = {
 post_font = '/usr/share/fonts/ubuntu/UbuntuMono-BI.ttf'
 pointing_hand_short_code = '👉'
 
-def generate_structure_episode(episode_number):
+def generate_structure_episode(episode_number, cover_file):
     episode_dir = Path(EPISODES_PATH+'/'+episode_number+'/')
     exist = episode_dir.is_dir()
     if not exist:
@@ -52,7 +52,7 @@ def generate_structure_episode(episode_number):
             dict_paths[content] = episode_dir / content
             dict_paths[content].mkdir()
 
-        generate_cover(episode_number, episode_name)
+        generate_cover(episode_number, episode_name, cover_file)
 
         for social in socials_post:
             post_file_data = dict_paths['post'] / (social+".txt")
@@ -80,8 +80,7 @@ def check_custom_cover(episode_number, cover_file):
         print("invalid response. Exiting")
         exit()
 
-def generate_cover(episode_number, episode_name):
-    cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg')
+def generate_cover(episode_number, episode_name, cover_file):
     template_cover_file = Path(COVER_TEMPLATES_PATH+'cover_template.jpg')
 
     check_custom_cover(episode_number, cover_file)
@@ -107,12 +106,12 @@ def check_max_chars_post(n_chars, social):
     if n_chars >= MAX_POST_CHARS:
         print("Linkedin/Facebook/Instagram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
         exit()
-    print(" >> Post length is OK!")
+    print(" >> "+social+" Post length is OK!")
 
 def access_tokens():
     tokens = {}
     dir_access_tokens = Path(ACCESS_TOKEN_PATH)
-    print("Access tokens found:")
+    print("\n Access tokens found:")
     for file_access_tokens in dir_access_tokens.iterdir():
         social = file_access_tokens.stem
         print("  - "+social)
@@ -132,10 +131,11 @@ def append_podcasting_platforms_link(episode_number):
 
 def main():
     episode_number = input("Episode °N: ")
-    if not generate_structure_episode(episode_number):
-        print("\n >> Folder structure generate for Episode N°: "+episode_number+"\n >> Fill files and rerun deliver.py specifiyng the same Episode N° ("+episode_number+")\n")
+    cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg')
+    if not generate_structure_episode(episode_number, cover_file):
+        print("\n >> Folder structure generate for Episode N°: "+episode_number+"\n >> Fill files and rerun deliver.py specifiyng the same Episode N° "+episode_number+"\n")
         exit()
-    print("Appending to post podcasting_platforms_link...")
+    print("\nAppending to post podcasting_platforms_link...")
     append_podcasting_platforms_link(episode_number)
     tokens = access_tokens()
 
