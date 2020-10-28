@@ -11,7 +11,9 @@ from PPfacebook import PP_facebook
 
 ACCESS_TOKEN_PATH = './access_tokens/'
 
-EPISODES_PATH = './Episodes'
+EPISODES_PATH = './episodes'
+
+COVER_TEMPLATES_PATH = './cover_templates'
 
 content_types = ['post', 'story']
 
