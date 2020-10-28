@@ -32,13 +32,7 @@ def encrypt_and_store():
 
 
 
-def decrypt_file(file_name):
-    password = None
-    try: 
-        password = input("Enter Decryption Password: ")
-    except EOFError:
-        print("EOFError")
-
+def decrypt_file(file_name, password):
     fernet = Fernet(get_key(password.encode('utf-8')))
 
     f = open(file_name, 'rb')

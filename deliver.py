@@ -10,6 +10,7 @@ from PIL import ImageDraw
 #Custom_module
 import crypto_utility
 from PPfacebook import PP_facebook
+from PPinstagram import PP_instagram
 
 
 #TODO:
@@ -139,8 +140,16 @@ def main():
     print("\nAppending to post podcasting_platforms_link...")
     append_podcasting_platforms_link(episode_number)
     tokens = access_tokens()
+    password = None
+    try: 
+        password = input("\nEnter Decryption Password: ")
+    except EOFError:
+        print("EOFError")
 
-    #PP_facebook_token = crypto_utility.decrypt_file(tokens['facebook'].resolve())
+    PP_facebook_token = crypto_utility.decrypt_file(tokens['facebook'].resolve(), password)
+    print(PP_facebook_token)
+    PP_instagram_token = crypto_utility.decrypt_file(tokens['instagram'].resolve(), password)
+    print(PP_instagram_token)
     #pp_facebook = PP_facebook(PP_facebook_token)
     #pp_facebook.get_message('836872193518697')
 
