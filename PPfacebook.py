@@ -1,8 +1,6 @@
 import facebook
 import urllib3, requests 
 
-print(facebook.__version__)
-
 class PP_facebook:
     
     __instance__ = None
