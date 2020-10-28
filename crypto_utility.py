@@ -4,8 +4,6 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
 import json
 
-if __name__ == '__main__':
-    encrypt_and_store()
 
 def get_key(password):
     digest = hashes.Hash(hashes.SHA256(), backend=default_backend())
@@ -50,3 +48,5 @@ def decrypt_file(file_name):
     decrypted = fernet.decrypt(encrypted_token)
     return decrypted.decode()
 
+if __name__ == '__main__':
+    encrypt_and_store()

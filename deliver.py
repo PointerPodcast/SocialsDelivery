@@ -14,6 +14,7 @@ from PPfacebook import PP_facebook
 
 #TODO:
 # is_access_token_valid --> try_catch
+# tag remapper
 
 
 MAX_POST_CHARS = 700 #lower_bound linkedin
@@ -139,9 +140,15 @@ def main():
     append_podcasting_platforms_link(episode_number)
     tokens = access_tokens()
 
-    #PP_facebook_token = crypto_utility.decrypt_file("./access_tokens/Facebook_token.enc")
+    #PP_facebook_token = crypto_utility.decrypt_file(tokens['facebook'].resolve())
     #pp_facebook = PP_facebook(PP_facebook_token)
     #pp_facebook.get_message('836872193518697')
+
+    #Pubblicare post su instagram
+    #Pubblicare su Linkedin
+    #Pubblicare su twitter
+    
+    #Storie su Instagram e Facebook
 
 
 main() 
