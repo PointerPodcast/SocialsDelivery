@@ -1,0 +1,24 @@
+2020-10-28 22:37:44,230 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-10-28 22:37:44,231 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+2020-10-28 22:37:44,231 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2020-10-28 22:37:44,231 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2020-10-28 22:37:44,231 - instabot version: 0.117.0 (api_login) - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=00c01371-479c-4107-ab6a-0fde89953d94
+- device_id=android-3a990627032d92c4
+2020-10-28 22:37:44,232 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2020-10-28 22:37:45,584 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-10-28 22:37:46,114 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-10-28 22:37:46,390 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-10-28 22:37:46,823 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-10-28 22:37:48,137 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+2020-10-28 22:37:48,519 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2020-10-28 22:37:49,139 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+2020-10-28 22:37:49,418 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+2020-10-28 22:37:49,736 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+2020-10-28 22:37:49,741 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'pointerpodcast'!
+2020-10-28 22:37:49,741 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+2020-10-28 22:37:52,634 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+2020-10-28 22:37:52,635 - instabot version: 0.117.0 (bot) - INFO - Total requests: 37

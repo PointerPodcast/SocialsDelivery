@@ -145,15 +145,17 @@ def main():
         password = input("\nEnter Decryption Password: ")
     except EOFError:
         print("EOFError")
+        exit()
 
     PP_facebook_token = crypto_utility.decrypt_file(tokens['facebook'].resolve(), password)
     print(PP_facebook_token)
     PP_instagram_token = crypto_utility.decrypt_file(tokens['instagram'].resolve(), password)
     print(PP_instagram_token)
     #pp_facebook = PP_facebook(PP_facebook_token)
-    #pp_facebook.get_message('836872193518697')
+    #pp_facebook.publish_post("ciao", cover_file.resolve())
+    #pp_instagram = PP_instagram(PP_instagram_token)
+    #pp_instagram.publish_post_and_story("ciao", str(cover_file.resolve()))
 
-    #Pubblicare post su instagram
     #Pubblicare su Linkedin
     #Pubblicare su twitter
     

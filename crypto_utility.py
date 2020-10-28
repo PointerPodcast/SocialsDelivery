@@ -39,7 +39,11 @@ def decrypt_file(file_name, password):
     encrypted_token = f.read()
     f.close()
 
-    decrypted = fernet.decrypt(encrypted_token)
+    try:
+        decrypted = fernet.decrypt(encrypted_token)
+    except Exception:
+        print("Invalid Password. Exit")
+        exit()
     return decrypted.decode()
 
 if __name__ == '__main__':

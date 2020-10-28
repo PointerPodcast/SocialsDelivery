@@ -1,4 +1,5 @@
 import instabot
+import os
 
 class PP_instagram:
     
@@ -19,7 +20,7 @@ class PP_instagram:
             self._bot.login(
                 username = credentials[0],
                 password = credentials[1],
-                use_cookie=True,
+                use_cookie=True
             )
         else:
             raise Exception("PP_instagram is singleton!")
@@ -34,11 +35,15 @@ class PP_instagram:
     def _publish_post(self, text='', image_path=''):
         self._bot.upload_photo(image_path, text)
 
+    #NOT WORKING. Instagram pretends 1080x1920 photo. 
     def _publish_story(self, image_path=''):
-        self._bot.upload_story_photo(image_path, self._users_to_tag)
+#        photo_data, photo_size = media.prepare_image(image_path, aspect_ratios=MediaRatios.reel)
+        self._bot.upload_story_photo('/home/alessandro/Github/SocialsDelivery/cover_templates/test.jpg')
 
-    def publish_post_story(self, text='', image_path=''):
+    def publish_post_and_story(self, text='', image_path=''):
+        #self._publish_story(image_path)
         self._publish_post(text, image_path)
-        self._publish_story(image_path)
+        #workaround to fix REMOVE_ME added by instabot
+        os.rename(image_path+'.REMOVE_ME', image_path)
 
 
