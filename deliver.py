@@ -9,6 +9,15 @@ import crypto_utility
 from PPfacebook import PP_facebook
 
 
+#TODO:
+# is_access_token_valid --> try_catch
+# MAXChar
+
+
+MAX_POST_CHARS = 700 #lowe_bound linkedin
+MAX_POST_CHARS_TWITTER = 280
+
+
 ACCESS_TOKEN_PATH = './access_tokens/'
 
 EPISODES_PATH = './episodes'
@@ -54,6 +63,9 @@ def generate_structure_episode(episode_number):
 def generate_cover():
     pass
 
+def check_max_chars_post():
+    pass
+
 def access_tokens():
     tokens = {}
     dir_access_tokens = Path(ACCESS_TOKEN_PATH)
@@ -64,11 +76,13 @@ def access_tokens():
         tokens[social] = file_access_tokens
     return tokens
 
+
 def main():
     episode_number = input("Episode °N: ")
     if not generate_structure_episode(episode_number):
         print("\n >>Folder structure generate for Episode N°: "+episode_number+".\n >>Fill files and rerun deliver.py specifiyng the same Episode N° ("+episode_number+")\n")
         exit()
+    print("Appending to post podcasting_platforms_link...")
     access_tokens()
 
     #PP_facebook_token = crypto_utility.decrypt_file("./access_tokens/Facebook_token.enc")
