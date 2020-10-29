@@ -8,9 +8,11 @@ from PIL import ImageFont
 from PIL import ImageDraw 
 
 #Custom_module
-import crypto_utility
-from PPfacebook import PP_facebook
-from PPinstagram import PP_instagram
+from utility import crypto_utility
+from utility.colors_prints import bcolors
+from PPSocials.PPfacebook import PP_facebook
+from PPSocials.PPinstagram import PP_instagram
+from PPSocials.PPtwitter import PP_twitter
 
 
 #TODO:
@@ -38,6 +40,12 @@ story_post = ['instagram', 'linkedin']
 dict_podcasting_platforms_links = {
     'Spotify': 'https://open.spotify.com/show/3XmDzcZv4rCIx1VpWrbrkh', #Spotify
     'ApplePodcast' : 'https://podcasts.apple.com/it/podcast/pointerpodcast/id1465505870', #ApplePodcast
+}
+
+socialToClass = {
+    'facebook' : PP_facebook,
+    'instagram' : PP_instagram,
+    'twitter' : PP_twitter,
 }
 
 post_font = '/usr/share/fonts/ubuntu/UbuntuMono-BI.ttf'
@@ -70,9 +78,8 @@ def check_custom_cover(episode_number, cover_file):
     yes = {'yes','y', 'ye', ''}
     no = {'no','n'}
     custom_cover_choice = input("Custom Cover? [Y/n]: ").lower()
-    print(custom_cover_choice)
     if custom_cover_choice in no:
-        print("Autogenerating Cover...")
+        print(bcolors.OKBLUE + "\nAutogenerating Cover..." + bcolors.ENDC)
     elif custom_cover_choice in yes:
         input("\n > Place your custom cover in: "+cover_file+". Place it then press [ENTER]")
         if not cover_file.is_file():
@@ -110,14 +117,14 @@ def check_max_chars_post(n_chars, social):
         exit()
     print(" >> "+social+" Post length is OK!")
 
-def access_tokens():
+def access_tokens(password):
     tokens = {}
     dir_access_tokens = Path(ACCESS_TOKEN_PATH)
-    print("\n Access tokens found:")
+    print(bcolors.OKGREEN + "\n Access tokens found:" + bcolors.ENDC)
     for file_access_tokens in dir_access_tokens.iterdir():
         social = file_access_tokens.stem
         print("  - "+social)
-        tokens[social] = file_access_tokens
+        tokens[social] = crypto_utility.decrypt_file(file_access_tokens.resolve(), password)
     return tokens
 
 
@@ -133,33 +140,39 @@ def append_podcasting_platforms_link(episode_number):
 
 def main():
     episode_number = input("Episode °N: ")
+
     cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg')
     if not generate_structure_episode(episode_number, cover_file):
-        print("\n >> Folder structure generate for Episode N°: "+episode_number+"\n >> Fill files and rerun deliver.py specifiyng the same Episode N° "+episode_number+"\n")
+        print(bcolors.WARNING +"\n >> Folder structure generate for Episode N°: "+episode_number+"\n >> Fill files under /episodes/"+episode_number+"/post/ and rerun deliver.py specifiyng the same Episode N° "+episode_number+"\n" + bcolors.ENDC)
         exit()
-    print("\nAppending to post podcasting_platforms_link...")
+
+    print(bcolors.OKGREEN + "\nAppending to post podcasting_platforms_link..." + bcolors.ENDC)
     append_podcasting_platforms_link(episode_number)
-    tokens = access_tokens()
+
     password = None
     try: 
-        password = input("\nEnter Decryption Password: ")
+        password = input("\nEnter Tokens Decryption Password: ")
     except EOFError:
         print("EOFError")
         exit()
 
-    PP_facebook_token = crypto_utility.decrypt_file(tokens['facebook'].resolve(), password)
-    print(PP_facebook_token)
-    PP_instagram_token = crypto_utility.decrypt_file(tokens['instagram'].resolve(), password)
-    print(PP_instagram_token)
-    #pp_facebook = PP_facebook(PP_facebook_token)
-    #pp_facebook.publish_post("ciao", cover_file.resolve())
-    #pp_instagram = PP_instagram(PP_instagram_token)
-    #pp_instagram.publish_post_and_story("ciao", str(cover_file.resolve()))
+    tokens = access_tokens(password)
+    social_instances = []
 
-    #Pubblicare su Linkedin
-    #Pubblicare su twitter
+
+    print("\n" + bcolors.HEADER + " Veryfing tokens..." + bcolors.ENDC )
+    for social in socialToClass.keys():
+        instance = socialToClass[social](tokens[social])
+        social_instances.append(instance) #Invoke constructors
+
+
+    '''
+    print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
+    for instance in social_instances:
+        p = 'Ciao a tutti'
+        instance.publish_post(p, str(cover_file.resolve()))
+    '''
+
+
     
-    #Storie su Instagram e Facebook
-
-
 main() 

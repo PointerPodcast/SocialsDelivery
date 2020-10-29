@@ -1,0 +1,17 @@
+2020-10-29 13:50:05,519 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-10-29 13:50:05,520 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+2020-10-29 13:50:05,520 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2020-10-29 13:50:05,520 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2020-10-29 13:50:05,520 - instabot version: 0.117.0 (api_login) - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=0159b381-d3b1-4f18-8002-91fc7707d32c
+- device_id=android-3a990627032d92c4
+2020-10-29 13:50:05,520 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2020-10-29 13:50:06,766 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-10-29 13:50:07,097 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-10-29 13:50:07,098 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'pointerpodcast'!
+2020-10-29 13:50:07,098 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+2020-10-29 13:50:07,385 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+2020-10-29 13:50:07,387 - instabot version: 0.117.0 (bot) - INFO - Total requests: 49

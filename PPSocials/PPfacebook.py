@@ -2,7 +2,7 @@ import facebook
 import urllib3, requests 
 
 
-print(facebook.__version__)
+#print(facebook.__version__)
 
 class PP_facebook:
     
@@ -14,7 +14,13 @@ class PP_facebook:
     def __init__(self, token):
         if PP_facebook.__instance__ is None:
             PP_facebook.__instance__ = self
-            self._graph = facebook.GraphAPI(access_token=token)
+            try:
+                self._graph = facebook.GraphAPI(access_token=token)
+                print(" > Facebook: Authentication OK")
+            except:
+                print(" > Facebook: unable to login.")
+                exit()
+
         else:
             raise Exception("PP_facebook is singleton!")
 
@@ -26,9 +32,10 @@ class PP_facebook:
     
 
     def publish_post(self, text='', image_path=''):
-        self._graph.put_photo(image=open(image_path, 'rb'),
-            message=text,
-        )
+        print(text)
+        print(image_path)
+        self._graph.put_photo(image = open(image_path, 'rb'), message = text)
+        print(" >> Facebook: published!")
 
     def get_message(self, post_id=''):
         complete_id = self._PP_PAGE_ID+'_'+post_id
