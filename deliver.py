@@ -16,7 +16,8 @@ from PPSocials.PPtwitter import PP_twitter
 
 
 #TODO:
-# is_access_token_valid --> try_catch
+# Telegram bot send image to saved message (o sul gruppo)
+# Schedule deploy
 # tag remapper
 
 
