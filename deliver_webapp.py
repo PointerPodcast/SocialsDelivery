@@ -187,8 +187,8 @@ def main():
 
     posts_creation(episode_dir, episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, mentions)
 
-    if not custom_cover_path:
-        generate_cover(episode_dir, episode_number, episode_name, cover_file)
+    #if not custom_cover_path:
+    generate_cover(episode_dir, episode_number, episode_name, cover_file)
 
     tokens = access_tokens(password)
     social_instances = {}
@@ -200,13 +200,11 @@ def main():
 
     tokens = {}
 
-    '''
     print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
     for social in social_instances.keys():
         post_file_data = episode_dir / 'post' / (social+".txt")
         post_text = post_file_data.read_text()
         social_instances[social].publish_post(post_text, str(cover_file.resolve()))
-    '''
 
 
     
