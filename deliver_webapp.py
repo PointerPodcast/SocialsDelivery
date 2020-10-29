@@ -66,13 +66,11 @@ def generate_structure_episode(episode_dir, episode_number):
     return exist
      
 
-def _append_podcasting_platforms_link(episode_dir):
+def _append_podcasting_platforms_link(episode_dir, social, post_file_data):
     print(bcolors.OKGREEN + "\nAppending to post podcasting_platforms_link..." + bcolors.ENDC)
-    for social in socialToClass.keys():
-        post_file_data = episode_dir / 'post' / (social+".txt")
-        with open(post_file_data, 'a+', encoding='utf-8') as file:
-            for key in dict_podcasting_platforms_links.keys(): 
-                file.write('\n'+key+': '+dict_podcasting_platforms_links[key]+'\n')
+    with open(post_file_data, 'a+', encoding='utf-8') as file:
+        for key in dict_podcasting_platforms_links.keys(): 
+            file.write('\n'+key+': '+dict_podcasting_platforms_links[key]+'\n')
 
 
 def _check_max_chars_post(social, post_file_data):
@@ -100,11 +98,13 @@ def _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter)
         socials = user.split(",")
         userToSocial = {}
         real_name = socials[0]
-        userToSocial['facebook'] = socials[0].strip()
-        userToSocial['instagram'] = socials[1].strip()
-        userToSocial['twitter'] = socials[2].strip()
-        userToSocial['linkedin'] = socials[3].strip()
+        userToSocial['facebook'] = socials[1].strip()
+        userToSocial['instagram'] = socials[2].strip()
+        userToSocial['twitter'] = socials[3].strip()
+        userToSocial['linkedin'] = socials[4].strip()
         for social in socialToPost.keys():
+            if(userToSocial[social] == '#'):
+                continue
             socialToPost[social] = socialToPost[social].replace(real_name, '@'+userToSocial[social]) 
     return socialToPost
         
@@ -116,11 +116,14 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
         post_file_data = episode_dir / 'post' / (social+".txt")
         if social == "instagram":
             post_file_data.write_text('Pointer['+episode_number+'] '+episode_name+' \n'+pointing_hand_short_code+pointing_hand_short_code+'[LINK in BIO]\n')
-            post_file_data.write_text(socialToPost[social]+'\n')
+            with open(post_file_data, 'a+', encoding='utf-8') as file:
+                file.write('\n'+socialToPost[social]+'\n')
         else:
             post_file_data.write_text('Pointer['+episode_number+'] '+episode_name+'\n')
-            post_file_data.write_text(socialToPost[social]+'\n')
-            _append_podcasting_platforms_link(episode_dir) #Appending only to facebook, linkedin and twitter
+            with open(post_file_data, 'a+', encoding='utf-8') as file:
+                file.write('\n'+socialToPost[social]+'\n')
+            if social != 'twitter':
+                _append_podcasting_platforms_link(episode_dir, social, post_file_data) #Appending only to facebook, linkedin and twitter
         _check_max_chars_post(social, post_file_data)
 
 
@@ -162,8 +165,8 @@ def main():
     episode_number = sys.argv[1].strip()
     episode_name = sys.argv[2].strip()
     post_facebook_linkedin_instagram_path = sys.argv[3].strip()
-    post_twitter_path = sys.argv[3].strip()
-    mentions_path = sys.argv[4].strip()
+    post_twitter_path = sys.argv[4].strip()
+    mentions_path = sys.argv[5].strip()
     password = sys.argv[6].strip()
     custom_cover_path = sys.argv[5]
 
