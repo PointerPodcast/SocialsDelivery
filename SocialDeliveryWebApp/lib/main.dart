@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -134,10 +135,100 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     void deliveryButton(){
-        print(_calendarController.selectedDay);
-        // Respond to button press
+        Map infoMapper = inputFormatter();
+        print(infoMapper.toString());
         //TODO: CHECK ALL FIELDS ARE VALID
     }
+
+
+    Map inputFormatter(){ 
+        Map infoMapper = new Map();
+
+        //AddNumber if not empty
+        String episodeNumber = episodeNumberController.text.trim();
+        infoMapper['episode_number'] = episodeNumber;
+
+        //AddTitle if not empty
+        String title = titleController.text.trim();
+        infoMapper['title'] = title;
+
+        String fliPost = FLI_controller.text.trim();
+        infoMapper['fli_post'] = fliPost;
+
+        String twitterPost = Twitter_controller.text.trim();
+        infoMapper['twitter_post'] = twitterPost;
+
+        int day = _calendarController.selectedDay.day;
+        int month = _calendarController.selectedDay.month;
+        int year = _calendarController.selectedDay.year;
+        String date = "$day-$month-$year";
+        print("DATE: $date");
+        infoMapper['date'] = date;
+        
+        int hour = _dateTime.hour;
+        int minute = _dateTime.minute;
+        String time = "$hour:$minute";
+        print("TIME: $time");
+        infoMapper['time'] = time;
+
+
+        int guestsNumber = guests.length;
+        infoMapper['guests_number'] = guestsNumber;
+
+        //Check if custom_cover has been uploaded
+        image == null ? infoMapper['custom_cover'] = false : infoMapper['custom_cover'] = true;
+
+        String password = passwordController.text.trim();
+        print("Password: $password");
+        infoMapper['password'] = password;
+
+        if ( episodeNumber.isEmpty || title.isEmpty || fliPost.isEmpty || twitterPost.isEmpty || date.isEmpty || time.isEmpty || password.isEmpty){
+                //TODO: lanciare un popup
+                throw new FormatException("Some value not entered"); 
+        }
+
+        int id = 0;
+        for (GuestSocials g in guests){
+            Map socialsTag = new Map();
+
+            String realName = g.nameSurnameController.text.trim();
+            if(realName.isEmpty)
+                throw new FormatException("No real name");
+
+            String facebook = g.facebookController.text.trim();
+
+            String instagram = g.instagramController.text.trim();
+
+            String linkedin = g.linkedinController.text.trim();
+
+            String twitter = g.twitterController.text.trim();
+
+            if( realName.isEmpty || facebook.isEmpty || instagram.isEmpty || linkedin.isEmpty || twitter.isEmpty){
+                //TODO: lanciare un popup "Sei sicuro di voler continuare"
+            }
+
+            if(facebook.isEmpty)
+                facebook = "#";
+            if(instagram.isEmpty)
+                instagram = "#";
+            if (linkedin.isEmpty)
+                linkedin = "#";
+            if(twitter.isEmpty)
+                twitter = "#";
+
+            socialsTag['real_name'] = realName;
+            socialsTag['facebook'] = facebook;
+            socialsTag['instagram'] = instagram;
+            socialsTag['linkedin'] = linkedin;
+            socialsTag['twitter'] = twitter;
+
+            infoMapper[id] = socialsTag;
+            id++;
+        }
+        return infoMapper;
+    }
+
+    //TODO: Quando fa il delivery prima deve controllare che la password è giusta, poi invia veramente
 
 
 
