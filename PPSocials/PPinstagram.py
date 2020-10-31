@@ -24,9 +24,9 @@ class PP_instagram:
                     use_cookie=True
                 )
                 print(" > Instagram: Authentication OK")
-            except:
-                print(" > Instagram: unable to login.")
-                exit()
+            except Exception as err:
+                print(" > Instagram: unable to login. "+str(err))
+                return
         else:
             raise Exception("PP_instagram is singleton!")
 

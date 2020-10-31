@@ -1,5 +1,6 @@
-import 'dart:io';
+import 'dart:convert';
 import 'dart:core';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -38,6 +39,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+    static final String ip = "localhost";
+    static final String port = "5000";
+    final String auth_url = "http://$ip:$port/socialdelivery/api/v1.0/authenticate";
+    final String deploy_url = "http://$ip:$port/socialdelivery/api/v1.0/deliverepisode";
+
     String FLI_fieldName = "Facebook/Instagram/Linkedin Post";
     int FLI_maxLenght = 700;
     int FLI_MaxLines = 7;
@@ -134,10 +141,50 @@ class _MyHomePageState extends State<MyHomePage> {
         });
     }
 
-    void deliveryButton(){
+    Future<http.Response> postAuth(String password){
+        return http.post(
+                auth_url,
+                headers: <String, String>{
+                    'Content-Type': 'application/json; charset=UTF-8',
+                },
+                body: jsonEncode(<String, String>{
+                    'password' : password,
+                }),
+        );
+    }
+
+    Future<http.Response> postDelivery(Map infoMapper){
+        return http.post(
+                deploy_url,
+                headers: <String, String>{
+                    'Content-Type': 'application/json; charset=UTF-8',
+                },
+                body: jsonEncode(<String, dynamic>{
+                    'episode_number': infoMapper['episode_number'],
+                    'title' : infoMapper['title'],
+                    'fli_post' : infoMapper['fli_post'],
+                    'twitter_post' : infoMapper['twitter_post'],
+                    'guests_number' : infoMapper['guests_number'],
+                    'guests' : jsonEncode(infoMapper['guests']),
+                    'password' : infoMapper['password'],
+                    'date' : infoMapper['date'],
+                    'time' : infoMapper['time'],
+                }),
+        );
+    }
+
+    void deliveryButton() async{
         Map infoMapper = inputFormatter();
         print(infoMapper.toString());
-        //TODO: CHECK ALL FIELDS ARE VALID
+        http.Response authResponse = await postAuth(infoMapper['password']);
+        Map decoded = jsonDecode(authResponse.body);
+        bool res = decoded['message']['result'];
+        print(res);
+        http.Response deliveryResponse;
+        if( res )
+            deliveryResponse = await postDelivery(infoMapper);
+            var res2 = jsonDecode(deliveryResponse.body);
+            print(res2);
     }
 
 
@@ -188,8 +235,9 @@ class _MyHomePageState extends State<MyHomePage> {
         }
 
         int id = 0;
+        Map<String,Map<String,String>> guestsToId = new Map();
         for (GuestSocials g in guests){
-            Map socialsTag = new Map();
+            Map<String,String> socialsTag = new Map();
 
             String realName = g.nameSurnameController.text.trim();
             if(realName.isEmpty)
@@ -222,13 +270,12 @@ class _MyHomePageState extends State<MyHomePage> {
             socialsTag['linkedin'] = linkedin;
             socialsTag['twitter'] = twitter;
 
-            infoMapper[id] = socialsTag;
+            guestsToId['$id'] = socialsTag;
             id++;
         }
+        infoMapper['guests'] = guestsToId;
         return infoMapper;
     }
-
-    //TODO: Quando fa il delivery prima deve controllare che la password è giusta, poi invia veramente
 
 
 

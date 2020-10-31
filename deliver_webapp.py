@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import sys
+import json
 import base64
 import os.path
 import shutil
+import logging
 from pathlib import Path
 from PIL import Image
 from PIL import ImageFont
@@ -18,10 +20,9 @@ from PPSocials.PPtwitter import PP_twitter
 
 
 #TODO:
-# Telegram bot send image to saved message (o sul gruppo)
 # Schedule deploy
-# tag remapper
 
+logging.basicConfig(filename='socialDelivery.log', filemode='a', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
 
 MAX_POST_CHARS = 700 #lower_bound linkedin
 MAX_POST_CHARS_TWITTER = 280
@@ -78,10 +79,10 @@ def _check_max_chars_post(social, post_file_data):
         n_chars = len(file.read())
         if social == "twitter" and n_chars > MAX_POST_CHARS_TWITTER:
             print("Twitter post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS_TWITTER)+")")
-            exit()
+            raise Exception("Twitter post exceeds maximum length")
         if n_chars >= MAX_POST_CHARS:
             print("Linkedin/Facebook/Instagram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
-            exit()
+            raise Exception("Linkedin/Facebook/Instagram post exceeds maximum length")
     print(" >> "+social+" Post length is OK!")
 
 
@@ -93,15 +94,16 @@ def _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter)
             socialToPost[social] = post_twitter
         else:
             socialToPost[social] = post_facebook_linkedin_instagram
-    users = mentions.split(";")
-    for user in users:
-        socials = user.split(",")
+    mentions_dict = json.loads(mentions)
+    print(mentions_dict)
+    for guestId in mentions_dict.keys():
+        print(guestId)
         userToSocial = {}
-        real_name = socials[0]
-        userToSocial['facebook'] = socials[1].strip()
-        userToSocial['instagram'] = socials[2].strip()
-        userToSocial['twitter'] = socials[3].strip()
-        userToSocial['linkedin'] = socials[4].strip()
+        real_name = mentions_dict[guestId]['real_name']
+        userToSocial['facebook'] = mentions_dict[guestId]['facebook']
+        userToSocial['instagram'] = mentions_dict[guestId]['instagram']
+        userToSocial['twitter'] = mentions_dict[guestId]['twitter']
+        userToSocial['linkedin'] = mentions_dict[guestId]['linkedin']
         for social in socialToPost.keys():
             if(userToSocial[social] == '#'):
                 continue
@@ -129,6 +131,7 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
 
 def generate_cover(episode_dir, episode_number, episode_name, cover_file):
     print("\n" + bcolors.HEADER + " Autogenerating cover..." + bcolors.ENDC )
+    logging.info("Autogenerating cover Episode: "+episode_number)
     template_cover_file = Path(COVER_TEMPLATES_PATH+'/cover_template.jpg')
     img = Image.open(template_cover_file.resolve())
     width, height = img.size
@@ -155,57 +158,67 @@ def access_tokens(password):
 
 
 def delete_episode(episode_number):
-    episode_delete = Path(EPISODES_PATH + "/" +episode_number)
-    shutil.rmtree(episode_delete)
+    try:
+        episode_delete = Path(EPISODES_PATH + "/" +episode_number)
+        shutil.rmtree(episode_delete)
+    except Exception as err:
+        logging.error(err)
+        return False, err
     print("Removed Episode: "+episode_number)
+    logging.info("Removed Episode: "+episode_number)
+    return True, 'OK'
 
+def authenticate(password):
+    logging.info('Authenticating...')
+    try:
+        access_tokens(password)
+    except Exception:
+        logging.error('Failed auth!')
+        return False, 'Failed auth'
+    return True, 'OK'
 
-#RETURN COVER IMAGE TO POST ON INSTAGRAM_STORIES
-def main():
-    episode_number = sys.argv[1].strip()
-    episode_name = sys.argv[2].strip()
-    post_facebook_linkedin_instagram_path = sys.argv[3].strip()
-    post_twitter_path = sys.argv[4].strip()
-    mentions_path = sys.argv[5].strip()
-    password = sys.argv[6].strip()
-    custom_cover_path = sys.argv[5]
-
-    if not episode_number or not episode_number or not post_facebook_linkedin_instagram_path or not post_twitter_path or not password:
+def deploy_episode(episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, password, guests_number, mentions=None, custom_cover=None):
+    if not episode_number or not episode_number or not post_facebook_linkedin_instagram or not post_twitter or not password:
         print("A value is empty")
-        exit()
-
-    post_facebook_linkedin_instagram = Path(post_facebook_linkedin_instagram_path).read_text()
-    post_twitter = Path(post_twitter_path).read_text()
-    mentions = Path(mentions_path).read_text()
+        logging.warning("A values is empty")
+        return False
 
     episode_dir = Path(EPISODES_PATH+'/'+episode_number+'/')
     cover_file = episode_dir / str('cover_'+episode_number+'.jpg')
 
-    if generate_structure_episode(episode_dir, episode_number):
-        print("Already present episode: "+episode_number)
-        exit()
+    try:
+        if generate_structure_episode(episode_dir, episode_number):
+            print("Already present episode: "+episode_number)
+            logging.error("Already present episode: "+episode_number)
+            return False
 
-    posts_creation(episode_dir, episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, mentions)
+        #Create posts
+        posts_creation(episode_dir, episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, mentions)
 
-    #if not custom_cover_path:
-    generate_cover(episode_dir, episode_number, episode_name, cover_file)
+        #if not custom_cover_path:
+        generate_cover(episode_dir, episode_number, episode_name, cover_file)
 
-    tokens = access_tokens(password)
-    social_instances = {}
+        tokens = access_tokens(password)
+        social_instances = {}
 
-    print("\n" + bcolors.HEADER + " Veryfing tokens..." + bcolors.ENDC )
-    for social in socialToClass.keys():
-        instance = socialToClass[social](tokens[social])
-        social_instances[social] = instance
+        print("\n" + bcolors.HEADER + " Veryfing tokens..." + bcolors.ENDC )
+        for social in socialToClass.keys():
+            instance = socialToClass[social](tokens[social])
+            social_instances[social] = instance
 
-    tokens = {}
+        tokens = {}
 
-    print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
-    for social in social_instances.keys():
-        post_file_data = episode_dir / 'post' / (social+".txt")
-        post_text = post_file_data.read_text()
-        social_instances[social].publish_post(post_text, str(cover_file.resolve()))
+        print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
+        logging.info("Posting Episode "+episode_number)
+        for social in social_instances.keys():
+            post_file_data = episode_dir / 'post' / (social+".txt")
+            post_text = post_file_data.read_text()
+            social_instances[social].publish_post(post_text, str(cover_file.resolve()))
 
+    except Exception as err:
+        print("Some exception has occurred. ", err)
+        logging.error("Some exception has occurred. "+ str(err))
+        return False
 
-    
-main() 
+    return True
+

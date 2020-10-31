@@ -1,0 +1,464 @@
+werkzeug - 2020-10-30 22:58:07,525 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 22:58:07,525 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 22:58:07,738 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 22:58:07,739 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 22:58:24,131 - INFO - 127.0.0.1 - - [30/Oct/2020 22:58:24] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 22:58:24,168 - INFO - 127.0.0.1 - - [30/Oct/2020 22:58:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:05:19,846 - INFO - 127.0.0.1 - - [30/Oct/2020 23:05:19] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:05:20,130 - INFO - 127.0.0.1 - - [30/Oct/2020 23:05:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:11:58,377 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:16:48,175 - INFO - 127.0.0.1 - - [30/Oct/2020 23:16:48] "[33mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+flask_cors.core - 2020-10-30 23:20:56,474 - WARNING - Unknown option passed to Flask-CORS: support_credentials
+flask_cors.core - 2020-10-30 23:20:56,474 - WARNING - Unknown option passed to Flask-CORS: support_credentials
+werkzeug - 2020-10-30 23:20:56,480 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:20:56,481 - INFO -  * Restarting with stat
+flask_cors.core - 2020-10-30 23:20:56,689 - WARNING - Unknown option passed to Flask-CORS: support_credentials
+flask_cors.core - 2020-10-30 23:20:56,689 - WARNING - Unknown option passed to Flask-CORS: support_credentials
+werkzeug - 2020-10-30 23:20:56,693 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:20:56,693 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:21:40,382 - INFO - 127.0.0.1 - - [30/Oct/2020 23:21:40] "[33mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:24:21,507 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:24:21,508 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:24:21,732 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:24:21,733 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:24:25,730 - INFO - 127.0.0.1 - - [30/Oct/2020 23:24:25] "[33mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:24:26,838 - INFO - 127.0.0.1 - - [30/Oct/2020 23:24:26] "[33mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:24:27,600 - INFO - 127.0.0.1 - - [30/Oct/2020 23:24:27] "[33mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:26:00,658 - INFO - 127.0.0.1 - - [30/Oct/2020 23:26:00] "[33mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:28:47,791 - INFO - 127.0.0.1 - - [30/Oct/2020 23:28:47] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:28:59,010 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:28:59,010 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:28:59,226 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:28:59,227 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:29:02,716 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:02] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:04,117 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:04] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:06,347 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:06] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:06,860 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:06] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:07,080 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:07] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:19,118 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:19] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:29:28,011 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:28] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:29:44,165 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:44] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:29:57,572 - INFO - 127.0.0.1 - - [30/Oct/2020 23:29:57] "[33mGET /socialdelivery/api/v1.0/getcover?number_cover=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:32:06,676 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:32:06,677 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:32:06,893 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:32:06,893 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:32:12,178 - INFO - 127.0.0.1 - - [30/Oct/2020 23:32:12] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:32:31,387 - INFO - 127.0.0.1 - - [30/Oct/2020 23:32:31] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:33:39,410 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:33:39,410 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:33:39,630 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:33:39,630 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:33:58,820 - INFO - 127.0.0.1 - - [30/Oct/2020 23:33:58] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:34:06,378 - INFO - 127.0.0.1 - - [30/Oct/2020 23:34:06] "[33mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:34:16,644 - INFO - 127.0.0.1 - - [30/Oct/2020 23:34:16] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:34:17,478 - INFO - 127.0.0.1 - - [30/Oct/2020 23:34:17] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:34:18,175 - INFO - 127.0.0.1 - - [30/Oct/2020 23:34:18] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:34:59,092 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:34:59,093 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:34:59,316 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:34:59,316 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:35:01,744 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:01] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:02,588 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:02] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:02,837 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:02] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:04,458 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:04] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:04,650 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:04] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:08,279 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:08] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:09,049 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:09,266 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:09,486 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:19,601 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:19] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:35:22,582 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:22] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:35:28,827 - INFO - 127.0.0.1 - - [30/Oct/2020 23:35:28] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:01,698 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:39:01,698 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:39:01,911 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:39:01,912 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:39:08,811 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:08] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:09,571 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:09,770 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:09,981 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:09] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:10,184 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:10] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:10,393 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:10] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:10,584 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:10] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:10,790 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:10] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:11,027 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:11] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:13,136 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:13] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:13,683 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:13] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:13,874 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:13] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:14,062 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:14] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:39:39,290 - INFO - 127.0.0.1 - - [30/Oct/2020 23:39:39] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:43:06,072 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:43:06,072 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:43:06,292 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:43:06,292 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:43:14,623 - INFO - 127.0.0.1 - - [30/Oct/2020 23:43:14] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:45:06,346 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:45:06,347 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:45:06,560 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:45:06,561 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:45:12,027 - INFO - 127.0.0.1 - - [30/Oct/2020 23:45:12] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:45:12,848 - INFO - 127.0.0.1 - - [30/Oct/2020 23:45:12] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:45:17,094 - INFO - 127.0.0.1 - - [30/Oct/2020 23:45:17] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:45:17,821 - INFO - 127.0.0.1 - - [30/Oct/2020 23:45:17] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:45:58,169 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:45:58,169 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:45:58,385 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:45:58,385 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:46:01,420 - INFO - 127.0.0.1 - - [30/Oct/2020 23:46:01] "[33mGET /socialdelivery/api/v1.0/getcover/ HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:46:04,517 - INFO - 127.0.0.1 - - [30/Oct/2020 23:46:04] "[33mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:49:31,213 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:49:31,213 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:49:31,426 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:49:31,426 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:49:43,284 - INFO - 127.0.0.1 - - [30/Oct/2020 23:49:43] "[33mGET /hi_foo HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:50:08,251 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:50:08,252 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:50:08,466 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:50:08,466 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:50:12,928 - INFO - 127.0.0.1 - - [30/Oct/2020 23:50:12] "[37mGET /pippo HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:51:10,265 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:51:10,265 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:51:10,502 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:51:10,503 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:51:16,982 - INFO - 127.0.0.1 - - [30/Oct/2020 23:51:16] "[37mGET /socialdelivery/delete HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:52:30,836 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:52:30,837 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:52:31,052 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:52:31,052 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:52:35,948 - INFO - 127.0.0.1 - - [30/Oct/2020 23:52:35] "[33mGET /socialdelivery/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:52:46,087 - INFO - 127.0.0.1 - - [30/Oct/2020 23:52:46] "[33mGET /socialdelivery/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:52:46,835 - INFO - 127.0.0.1 - - [30/Oct/2020 23:52:46] "[33mGET /socialdelivery/getcover?episode_number=0 HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:52:56,777 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:52:56,777 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:52:56,990 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:52:56,990 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:53:38,222 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:53:38,222 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:53:38,442 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:53:38,442 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:53:45,336 - INFO - 127.0.0.1 - - [30/Oct/2020 23:53:45] "[33mGET /socialdelivery/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:53:46,032 - INFO - 127.0.0.1 - - [30/Oct/2020 23:53:46] "[33mGET /socialdelivery/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:54:55,244 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:54:55,245 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:54:55,483 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:54:55,484 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:54:59,087 - INFO - 127.0.0.1 - - [30/Oct/2020 23:54:59] "[33mGET /socialdelivery/getcover HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:55:10,835 - INFO - 127.0.0.1 - - [30/Oct/2020 23:55:10] "[33mGET /socialdelivery/delete HTTP/1.1[0m" 404 -
+werkzeug - 2020-10-30 23:56:52,482 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:56:52,482 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:56:52,708 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:56:52,708 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:57:06,114 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:57:06,114 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:57:06,332 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:57:06,332 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:57:14,838 - INFO - 127.0.0.1 - - [30/Oct/2020 23:57:14] "[35m[1mGET /socialdelivery/api/v1.0/getcover HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-30 23:57:25,596 - INFO - 127.0.0.1 - - [30/Oct/2020 23:57:25] "[37mGET /socialdelivery/api/v1.0/getcover?episode_number=0 HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-30 23:58:17,993 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:58:17,994 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:58:18,217 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:58:18,217 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:58:24,220 - INFO - 127.0.0.1 - - [30/Oct/2020 23:58:24] "[31m[1mGET /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 405 -
+werkzeug - 2020-10-30 23:58:35,116 - INFO - 127.0.0.1 - - [30/Oct/2020 23:58:35] "[31m[1mPUT /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 405 -
+werkzeug - 2020-10-30 23:58:36,000 - INFO - 127.0.0.1 - - [30/Oct/2020 23:58:36] "[31m[1mPUT /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 405 -
+werkzeug - 2020-10-30 23:58:42,119 - INFO - 127.0.0.1 - - [30/Oct/2020 23:58:42] "[35m[1mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-30 23:59:39,343 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-30 23:59:39,343 - INFO -  * Restarting with stat
+werkzeug - 2020-10-30 23:59:39,559 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-30 23:59:39,559 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-30 23:59:49,711 - INFO - 127.0.0.1 - - [30/Oct/2020 23:59:49] "[35m[1mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-30 23:59:50,709 - INFO - 127.0.0.1 - - [30/Oct/2020 23:59:50] "[35m[1mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-31 00:00:52,437 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:00:52,437 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:00:52,661 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:00:52,661 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:00:56,598 - INFO - 127.0.0.1 - - [31/Oct/2020 00:00:56] "[35m[1mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-31 00:00:57,689 - INFO - 127.0.0.1 - - [31/Oct/2020 00:00:57] "[35m[1mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-31 00:03:18,517 - INFO - 127.0.0.1 - - [31/Oct/2020 00:03:18] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:03:54,598 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:03:54,599 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:03:54,816 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:03:54,816 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:03:56,729 - INFO - 127.0.0.1 - - [31/Oct/2020 00:03:56] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:04:11,580 - INFO - 127.0.0.1 - - [31/Oct/2020 00:04:11] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:04:12,673 - INFO - 127.0.0.1 - - [31/Oct/2020 00:04:12] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:04:55,749 - INFO - 127.0.0.1 - - [31/Oct/2020 00:04:55] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:06:25,259 - INFO - 127.0.0.1 - - [31/Oct/2020 00:06:25] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:06:25,849 - INFO - 127.0.0.1 - - [31/Oct/2020 00:06:25] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:08:55,659 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:08:55,659 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:08:55,880 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:08:55,881 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:08:59,860 - INFO - 127.0.0.1 - - [31/Oct/2020 00:08:59] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:08:59,901 - INFO - 127.0.0.1 - - [31/Oct/2020 00:08:59] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:22:39,418 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:22:39,418 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:22:39,637 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:22:39,638 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:22:42,626 - INFO - 127.0.0.1 - - [31/Oct/2020 00:22:42] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:22:42,673 - INFO - 127.0.0.1 - - [31/Oct/2020 00:22:42] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:25:01,326 - INFO - 127.0.0.1 - - [31/Oct/2020 00:25:01] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:25:01,329 - INFO - 127.0.0.1 - - [31/Oct/2020 00:25:01] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:26:08,447 - INFO - 127.0.0.1 - - [31/Oct/2020 00:26:08] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:26:08,451 - INFO - 127.0.0.1 - - [31/Oct/2020 00:26:08] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:28:32,905 - INFO - 127.0.0.1 - - [31/Oct/2020 00:28:32] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:28:32,908 - INFO - 127.0.0.1 - - [31/Oct/2020 00:28:32] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:29:35,552 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:35] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:29:35,556 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:35] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:29:35,651 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:35] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:29:35,663 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:35] "[35m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-31 00:29:58,684 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:58] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:29:58,688 - INFO - 127.0.0.1 - - [31/Oct/2020 00:29:58] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:30:29,123 - INFO - 127.0.0.1 - - [31/Oct/2020 00:30:29] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:30:29,128 - INFO - 127.0.0.1 - - [31/Oct/2020 00:30:29] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:32:25,065 - INFO - 127.0.0.1 - - [31/Oct/2020 00:32:25] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:32:25,068 - INFO - 127.0.0.1 - - [31/Oct/2020 00:32:25] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:35:26,008 - INFO - 127.0.0.1 - - [31/Oct/2020 00:35:26] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:35:26,011 - INFO - 127.0.0.1 - - [31/Oct/2020 00:35:26] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:35:26,113 - INFO - 127.0.0.1 - - [31/Oct/2020 00:35:26] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:35:26,115 - ERROR - Already present episode: 2
+werkzeug - 2020-10-31 00:35:26,115 - INFO - 127.0.0.1 - - [31/Oct/2020 00:35:26] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:41:04,263 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:41:04,264 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:41:04,489 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:41:04,490 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:41:54,850 - INFO - 127.0.0.1 - - [31/Oct/2020 00:41:54] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:41:54,896 - INFO - 127.0.0.1 - - [31/Oct/2020 00:41:54] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:41:54,994 - INFO - 127.0.0.1 - - [31/Oct/2020 00:41:54] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 00:41:55,058 - INFO - Instabot version: 0.117.0 Started
+instabot version: 0.117.0 - 2020-10-31 00:41:55,059 - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+instabot version: 0.117.0 - 2020-10-31 00:41:55,060 - DEBUG - Loading cookies
+instabot version: 0.117.0 - 2020-10-31 00:41:55,060 - DEBUG - Loading uuids
+instabot version: 0.117.0 - 2020-10-31 00:41:55,060 - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=463a70e0-9767-4132-a669-cb89f8ff5426
+- device_id=android-3a990627032d92c4
+instabot version: 0.117.0 - 2020-10-31 00:41:55,061 - INFO - LOGIN FLOW! Just logged-in: False
+instabot version: 0.117.0 - 2020-10-31 00:41:56,790 - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:41:58,077 - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:41:58,497 - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:41:58,790 - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:41:59,894 - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:42:00,423 - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:42:01,352 - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:42:01,903 - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:42:03,642 - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:42:03,644 - INFO - Logged-in successfully as 'pointerpodcast'!
+instabot version: 0.117.0 - 2020-10-31 00:42:03,644 - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+werkzeug - 2020-10-31 00:43:09,410 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:09] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:09,418 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:09] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:09,446 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:09] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:43:09,450 - ERROR - Already present episode: 0
+werkzeug - 2020-10-31 00:43:09,450 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:09] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:43:25,451 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:25] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:25,458 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:25] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:25,561 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:25] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:25,625 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:25] "[35m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 500 -
+werkzeug - 2020-10-31 00:43:34,398 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:34] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:34,401 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:34] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:34,502 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:34] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:43:34,505 - ERROR - Already present episode: 1
+werkzeug - 2020-10-31 00:43:34,506 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:34] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:43:42,209 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:42] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:42,212 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:42] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:42,219 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:42] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:43:42,272 - INFO - 127.0.0.1 - - [31/Oct/2020 00:43:42] "[35m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 500 -
+instabot version: 0.117.0 - 2020-10-31 00:44:19,423 - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 00:44:19,426 - INFO - Total requests: 51
+werkzeug - 2020-10-31 00:45:23,644 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:45:23,645 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:45:23,865 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:45:23,865 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:46:11,437 - INFO - 127.0.0.1 - - [31/Oct/2020 00:46:11] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:46:11,483 - INFO - 127.0.0.1 - - [31/Oct/2020 00:46:11] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:46:11,589 - INFO - 127.0.0.1 - - [31/Oct/2020 00:46:11] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:48:06,902 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:48:06,903 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:48:07,123 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:48:07,123 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:48:17,462 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:17] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:48:17,518 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:17] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:48:17,639 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:17] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:48:17,641 - ERROR - Already present episode: 3
+werkzeug - 2020-10-31 00:48:17,642 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:17] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:48:24,925 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:24] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:48:24,929 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:24] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:48:25,036 - INFO - 127.0.0.1 - - [31/Oct/2020 00:48:25] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:48:25,062 - ERROR - Some exception has occurred. invalid face handle
+werkzeug - 2020-10-31 00:51:54,931 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:51:54,932 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:51:55,154 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:51:55,155 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:51:57,866 - INFO - 127.0.0.1 - - [31/Oct/2020 00:51:57] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:51:57,914 - INFO - 127.0.0.1 - - [31/Oct/2020 00:51:57] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:51:58,050 - INFO - 127.0.0.1 - - [31/Oct/2020 00:51:58] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:51:58,052 - ERROR - Already present episode: 4
+werkzeug - 2020-10-31 00:51:58,052 - INFO - 127.0.0.1 - - [31/Oct/2020 00:51:58] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:52:08,735 - INFO - 127.0.0.1 - - [31/Oct/2020 00:52:08] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:52:08,739 - INFO - 127.0.0.1 - - [31/Oct/2020 00:52:08] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:52:08,842 - INFO - 127.0.0.1 - - [31/Oct/2020 00:52:08] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:52:08,866 - ERROR - Some exception has occurred. invalid face handle
+werkzeug - 2020-10-31 00:53:07,273 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:53:07,274 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:53:07,496 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:53:07,496 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:53:12,504 - INFO - 127.0.0.1 - - [31/Oct/2020 00:53:12] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:53:12,562 - INFO - 127.0.0.1 - - [31/Oct/2020 00:53:12] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:53:12,658 - INFO - 127.0.0.1 - - [31/Oct/2020 00:53:12] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:55:40,902 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:55:40,902 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:55:41,119 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:55:41,119 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:55:46,888 - INFO - 127.0.0.1 - - [31/Oct/2020 00:55:46] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:55:46,929 - INFO - 127.0.0.1 - - [31/Oct/2020 00:55:46] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:55:47,028 - INFO - 127.0.0.1 - - [31/Oct/2020 00:55:47] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 00:55:47,078 - INFO - Instabot version: 0.117.0 Started
+instabot version: 0.117.0 - 2020-10-31 00:55:47,078 - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+instabot version: 0.117.0 - 2020-10-31 00:55:47,079 - DEBUG - Loading cookies
+instabot version: 0.117.0 - 2020-10-31 00:55:47,079 - DEBUG - Loading uuids
+instabot version: 0.117.0 - 2020-10-31 00:55:47,079 - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=00ec0716-6e59-4551-afaf-2a925a84d557
+- device_id=android-3a990627032d92c4
+instabot version: 0.117.0 - 2020-10-31 00:55:47,079 - INFO - LOGIN FLOW! Just logged-in: False
+instabot version: 0.117.0 - 2020-10-31 00:55:48,469 - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:55:49,348 - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 00:55:49,349 - INFO - Logged-in successfully as 'pointerpodcast'!
+instabot version: 0.117.0 - 2020-10-31 00:55:49,349 - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+werkzeug - 2020-10-31 00:58:19,242 - INFO -  * Detected change in '/home/alessandro/Github/SocialsDelivery/PPSocials/PPinstagram.py', reloading
+instabot version: 0.117.0 - 2020-10-31 00:58:19,245 - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 00:58:19,246 - INFO - Total requests: 51
+werkzeug - 2020-10-31 00:58:19,307 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:58:57,164 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:58:57,164 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:58:57,379 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:58:57,380 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:59:04,313 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:04] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:04,352 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:04] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:04,459 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:04] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:17,940 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 00:59:17,941 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 00:59:18,159 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 00:59:18,159 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 00:59:20,993 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:20] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:21,042 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:21] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:21,141 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:21] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:59:21,144 - ERROR - Already present episode: 8
+werkzeug - 2020-10-31 00:59:21,144 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:21] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 00:59:26,764 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:26] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:26,767 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:26] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 00:59:26,889 - INFO - 127.0.0.1 - - [31/Oct/2020 00:59:26] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 00:59:26,912 - ERROR - Some exception has occurred. invalid face handle
+werkzeug - 2020-10-31 01:02:20,490 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:02:20,490 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:02:20,710 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:02:20,711 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:02:26,696 - INFO - 127.0.0.1 - - [31/Oct/2020 01:02:26] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:02:26,735 - INFO - 127.0.0.1 - - [31/Oct/2020 01:02:26] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:02:26,872 - INFO - 127.0.0.1 - - [31/Oct/2020 01:02:26] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 01:02:26,924 - INFO - Instabot version: 0.117.0 Started
+instabot version: 0.117.0 - 2020-10-31 01:02:26,924 - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+instabot version: 0.117.0 - 2020-10-31 01:02:26,924 - DEBUG - Loading cookies
+instabot version: 0.117.0 - 2020-10-31 01:02:26,925 - DEBUG - Loading uuids
+instabot version: 0.117.0 - 2020-10-31 01:02:26,925 - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=00ec0716-6e59-4551-afaf-2a925a84d557
+- device_id=android-3a990627032d92c4
+instabot version: 0.117.0 - 2020-10-31 01:02:26,925 - INFO - LOGIN FLOW! Just logged-in: False
+instabot version: 0.117.0 - 2020-10-31 01:02:28,141 - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:02:28,715 - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:02:28,716 - INFO - Logged-in successfully as 'pointerpodcast'!
+instabot version: 0.117.0 - 2020-10-31 01:02:28,716 - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 01:02:54,675 - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:02:54,929 - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:02:54,930 - INFO - Photo '/home/alessandro/Github/SocialsDelivery/episodes/10/cover_10.jpg' is uploaded.
+werkzeug - 2020-10-31 01:02:55,608 - INFO - 127.0.0.1 - - [31/Oct/2020 01:02:55] "[37mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 01:04:56,763 - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 01:04:56,764 - INFO - Total requests: 53
+werkzeug - 2020-10-31 01:08:55,519 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:08:55,520 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:08:55,757 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:08:55,760 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:08:57,880 - INFO - 127.0.0.1 - - [31/Oct/2020 01:08:57] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:08:57,936 - INFO - 127.0.0.1 - - [31/Oct/2020 01:08:57] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:08:58,033 - INFO - 127.0.0.1 - - [31/Oct/2020 01:08:58] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:08:58,092 - INFO - 127.0.0.1 - - [31/Oct/2020 01:08:58] "[37mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:14:01,551 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:14:01,552 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:14:01,781 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:14:01,784 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:14:54,012 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:14:54,012 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:14:54,241 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:14:54,241 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:14:59,814 - INFO - 127.0.0.1 - - [31/Oct/2020 01:14:59] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:14:59,875 - INFO - 127.0.0.1 - - [31/Oct/2020 01:14:59] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:15:14,998 - INFO - 127.0.0.1 - - [31/Oct/2020 01:15:14] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:15:15,005 - INFO - 127.0.0.1 - - [31/Oct/2020 01:15:15] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:15:39,046 - INFO - 127.0.0.1 - - [31/Oct/2020 01:15:39] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:15:39,049 - INFO - 127.0.0.1 - - [31/Oct/2020 01:15:39] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:16:57,901 - INFO - 127.0.0.1 - - [31/Oct/2020 01:16:57] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:16:57,906 - INFO - 127.0.0.1 - - [31/Oct/2020 01:16:57] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:16:58,025 - INFO - 127.0.0.1 - - [31/Oct/2020 01:16:58] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 01:16:58,029 - ERROR - Some exception has occurred. 'real_name'
+werkzeug - 2020-10-31 01:16:58,030 - INFO - 127.0.0.1 - - [31/Oct/2020 01:16:58] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 01:17:05,743 - INFO - 127.0.0.1 - - [31/Oct/2020 01:17:05] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:17:05,746 - INFO - 127.0.0.1 - - [31/Oct/2020 01:17:05] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:17:05,850 - INFO - 127.0.0.1 - - [31/Oct/2020 01:17:05] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 01:17:05,853 - ERROR - Some exception has occurred. 'real_name'
+werkzeug - 2020-10-31 01:17:05,854 - INFO - 127.0.0.1 - - [31/Oct/2020 01:17:05] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 01:19:03,708 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:19:03,708 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:19:03,930 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:19:03,931 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:19:07,512 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:07] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:19:07,577 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:07] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:19:07,696 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:07] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+root - 2020-10-31 01:19:07,698 - ERROR - Already present episode: 15
+werkzeug - 2020-10-31 01:19:07,699 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:07] "[31m[1mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 400 -
+werkzeug - 2020-10-31 01:19:14,277 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:14] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:19:14,280 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:14] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:19:14,399 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:14] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:19:14,460 - INFO - 127.0.0.1 - - [31/Oct/2020 01:19:14] "[37mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:20:48,762 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-10-31 01:20:48,763 - INFO -  * Restarting with stat
+werkzeug - 2020-10-31 01:20:48,989 - WARNING -  * Debugger is active!
+werkzeug - 2020-10-31 01:20:48,989 - INFO -  * Debugger PIN: 266-223-462
+werkzeug - 2020-10-31 01:21:30,283 - INFO - 127.0.0.1 - - [31/Oct/2020 01:21:30] "[37mOPTIONS /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:21:30,324 - INFO - 127.0.0.1 - - [31/Oct/2020 01:21:30] "[37mPOST /socialdelivery/api/v1.0/authenticate HTTP/1.1[0m" 200 -
+werkzeug - 2020-10-31 01:21:30,412 - INFO - 127.0.0.1 - - [31/Oct/2020 01:21:30] "[37mOPTIONS /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 01:21:30,464 - INFO - Instabot version: 0.117.0 Started
+instabot version: 0.117.0 - 2020-10-31 01:21:30,464 - DEBUG - Bot imported from /home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/instabot/bot/bot.py
+instabot version: 0.117.0 - 2020-10-31 01:21:30,465 - DEBUG - Loading cookies
+instabot version: 0.117.0 - 2020-10-31 01:21:30,465 - DEBUG - Loading uuids
+instabot version: 0.117.0 - 2020-10-31 01:21:30,465 - INFO - Recovery from /home/alessandro/Github/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=5930219e-2058-40c6-bd5e-89d1b3c4574d
+- uuid=b633e0f3-e3bb-409c-8390-c7fe50a8f211
+- client_session_id=00ec0716-6e59-4551-afaf-2a925a84d557
+- device_id=android-3a990627032d92c4
+instabot version: 0.117.0 - 2020-10-31 01:21:30,465 - INFO - LOGIN FLOW! Just logged-in: False
+instabot version: 0.117.0 - 2020-10-31 01:21:31,765 - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:32,686 - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:32,956 - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:33,218 - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:34,285 - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:34,645 - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:35,440 - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:35,700 - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:35,999 - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:21:36,002 - INFO - Logged-in successfully as 'pointerpodcast'!
+instabot version: 0.117.0 - 2020-10-31 01:21:36,002 - DEBUG - Loading Checkpoint file from: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 01:22:01,298 - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:22:01,579 - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+instabot version: 0.117.0 - 2020-10-31 01:22:01,579 - INFO - Photo '/home/alessandro/Github/SocialsDelivery/episodes/0/cover_0.jpg' is uploaded.
+werkzeug - 2020-10-31 01:22:02,350 - INFO - 127.0.0.1 - - [31/Oct/2020 01:22:02] "[37mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
+instabot version: 0.117.0 - 2020-10-31 01:38:02,015 - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
+instabot version: 0.117.0 - 2020-10-31 01:38:02,030 - INFO - Total requests: 55
