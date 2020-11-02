@@ -1,11 +1,13 @@
 import 'dart:convert';
 import 'dart:core';
+import 'dart:typed_data';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
-import 'package:flutter_web_image_picker/flutter_web_image_picker.dart';
+import 'package:file_picker/file_picker.dart';
 import './PlusMinusCounter.dart';
 
 void main() {
@@ -44,14 +46,15 @@ class _MyHomePageState extends State<MyHomePage> {
     static final String port = "5000";
     final String auth_url = "http://$ip:$port/socialdelivery/api/v1.0/authenticate";
     final String deploy_url = "http://$ip:$port/socialdelivery/api/v1.0/deliverepisode";
+    final String post_custom_cover_url = "http://$ip:$port/socialdelivery/api/v1.0/postcustomcover";
 
     String FLI_fieldName = "Facebook/Instagram/Linkedin Post";
-    int FLI_maxLenght = 700;
+    int FLI_maxLenght = 700-118; //il 118 è per i link a spotify ecc
     int FLI_MaxLines = 7;
     TextEditingController FLI_controller = new TextEditingController();
 
     String Twitter_fieldName = "Twitter Post";
-    int Twitter_maxLenght = 280;
+    int Twitter_maxLenght = 280-17; //13 è per [Link in BIO]
     int Twitter_maxLines = 7;
     TextEditingController Twitter_controller = new TextEditingController();
 
@@ -76,15 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
     bool somethingIsEmpty = true;
 
-    TextEditingController nameSurnameController = new TextEditingController();
-    TextEditingController facebookController = new TextEditingController();
-    TextEditingController instagramController = new TextEditingController();
-    TextEditingController twitterController = new TextEditingController();
-    TextEditingController linkedinController = new TextEditingController();
-
     DateTime _dateTime = DateTime.now();
 
+    PlatformFile platformFile;
     Image image;
+    FilePickerResult result;
 
     void initState() {
         super.initState();
@@ -98,15 +97,25 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     Future getImage() async {
-        final _image = await FlutterWebImagePicker.getImage;
+        final FilePickerResult _result = await FilePicker.platform.pickFiles(type: FileType.image);
         setState(() {
-          if (_image != null) {
-            image = _image;
+          if (_result != null) {
+            result = _result;
+            platformFile = result.files.first;
+            image = Image.memory(platformFile.bytes);
           } else {
             print('No image selected.');
           }
         });
       }
+
+    Future discardImage() async{
+        setState(() {
+            result = null;
+            platformFile = null;
+            image = null;
+        });
+    }
 
     void _addGuest(){
         TextEditingController nameSurnameController = new TextEditingController();
@@ -114,6 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
         TextEditingController instagramController = new TextEditingController();
         TextEditingController twitterController = new TextEditingController();
         TextEditingController linkedinController = new TextEditingController();
+        TextEditingController telegramController = new TextEditingController();
 
         GuestSocials guest = new GuestSocials(
                 nameSurnameController: nameSurnameController,
@@ -121,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 instagramController: instagramController,
                 twitterController: twitterController,
                 linkedinController: linkedinController,
+                telegramController: telegramController,
         );
         setState(() {
             guests.add(guest);
@@ -169,22 +180,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     'password' : infoMapper['password'],
                     'date' : infoMapper['date'],
                     'time' : infoMapper['time'],
+                    'custom_cover_name' : infoMapper['custom_cover_name'],
+                    'custom_cover_data' : infoMapper['custom_cover_data'],
                 }),
         );
     }
+
 
     void deliveryButton() async{
         Map infoMapper = inputFormatter();
         print(infoMapper.toString());
         http.Response authResponse = await postAuth(infoMapper['password']);
         Map decoded = jsonDecode(authResponse.body);
-        bool res = decoded['message']['result'];
-        print(res);
+        bool auth_is_ok = decoded['message']['result'];
+        print(auth_is_ok);
         http.Response deliveryResponse;
-        if( res )
+        if( auth_is_ok ){
+            if(result != null){
+                    infoMapper['custom_cover_name'] = platformFile.name;
+                    infoMapper['custom_cover_data'] = platformFile.bytes;
+            }
             deliveryResponse = await postDelivery(infoMapper);
             var res2 = jsonDecode(deliveryResponse.body);
             print(res2);
+        }
     }
 
 
@@ -251,7 +270,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
             String twitter = g.twitterController.text.trim();
 
-            if( realName.isEmpty || facebook.isEmpty || instagram.isEmpty || linkedin.isEmpty || twitter.isEmpty){
+            String telegram = g.telegramController.text.trim();
+
+            if( realName.isEmpty || facebook.isEmpty || instagram.isEmpty || linkedin.isEmpty || twitter.isEmpty || telegram.isEmpty){
                 //TODO: lanciare un popup "Sei sicuro di voler continuare"
             }
 
@@ -263,12 +284,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 linkedin = "#";
             if(twitter.isEmpty)
                 twitter = "#";
+            if(telegram.isEmpty)
+                telegram = "#";
 
             socialsTag['real_name'] = realName;
             socialsTag['facebook'] = facebook;
             socialsTag['instagram'] = instagram;
             socialsTag['linkedin'] = linkedin;
             socialsTag['twitter'] = twitter;
+            socialsTag['telegram'] = telegram;
 
             guestsToId['$id'] = socialsTag;
             id++;
@@ -466,6 +490,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                                 ),
                                                                             ),
                                                                         ),
+                                                                        Padding(
+                                                                            padding: EdgeInsets.all(20),
+                                                                            child: Text("Telegram",
+                                                                                textAlign: TextAlign.center,
+                                                                                style: TextStyle(
+                                                                                        fontSize: 15,
+                                                                                        fontWeight: FontWeight.bold,
+                                                                                ),
+                                                                            ),
+                                                                        ),
                                                                     ]
                                                             ),
                                                         ]
@@ -556,19 +590,37 @@ class _MyHomePageState extends State<MyHomePage> {
                                                           ),
                                                         ),
                                             ),
-                                            Padding(
-                                                padding: EdgeInsets.all(30),
-                                                child: RaisedButton(
-                                                        textColor: Colors.white,
-                                                        color : Colors.blueGrey,
-                                                        onPressed: getImage,
-                                                        child: Text("Upload Custom Cover",
-                                                                       style: TextStyle(
-                                                                               fontSize: 20,
-                                                                       )
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                    children: [
+                                                        Padding(
+                                                            padding: EdgeInsets.all(20),
+                                                            child: RaisedButton(
+                                                                    textColor: Colors.white,
+                                                                    color : Colors.green,
+                                                                    onPressed: getImage,
+                                                                    child: Text("Upload Custom Cover",
+                                                                                   style: TextStyle(
+                                                                                           fontSize: 20,
+                                                                                   )
+                                                                            ),
                                                                 ),
+                                                        ),
+                                                        Padding(
+                                                            padding: EdgeInsets.all(20),
+                                                            child: RaisedButton(
+                                                                    textColor: Colors.white,
+                                                                    color : Colors.red,
+                                                                    onPressed: discardImage,
+                                                                    child: Text("Discard Upload Cover",
+                                                                                   style: TextStyle(
+                                                                                           fontSize: 20,
+                                                                                   )
+                                                                            ),
+                                                                ),
+                                                        ),
+                                                        ]
                                                     ),
-                                            ),
                                         ]
                                     ),
                                     Container(
@@ -631,6 +683,7 @@ class GuestSocials extends StatefulWidget{
     final TextEditingController instagramController;
     final TextEditingController twitterController;
     final TextEditingController linkedinController;
+    final TextEditingController telegramController;
 
     const GuestSocials({
         Key key,
@@ -639,6 +692,7 @@ class GuestSocials extends StatefulWidget{
         @required this.instagramController,
         @required this.twitterController,
         @required this.linkedinController,
+        @required this.telegramController,
     }) : super(key: key);
 
     @override
@@ -686,6 +740,13 @@ class _GuestSocialsState extends State<GuestSocials>{
                                     child: TextFormField(
                                             textAlign: TextAlign.center,
                                             controller : widget.linkedinController,
+                                    ),
+                                ),
+                                Padding(
+                                    padding: EdgeInsets.all(20),
+                                    child: TextFormField(
+                                            textAlign: TextAlign.center,
+                                            controller : widget.telegramController,
                                     ),
                                 ),
                             ]

@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
+import json
 import sched
-from threading import Thread
-from datetime import date
 import time as time_module
+import numpy as np
+from PIL import Image
+from datetime import date
+from threading import Thread
 
 from flask import Flask
 from flask import request
@@ -38,6 +41,30 @@ def delete_episode_by_number():
     else:
         return response, 400
 
+
+'''
+@app.route('/socialdelivery/api/v1.0/postcustomcover', methods=['POST'])
+def post_customcover():
+    # convert string of image data to uint8
+    print(request.json['name'])
+    complete_file_name = request.json['name']
+    info = complete_file_name.split('.')
+    name = info[0]
+    extension = info[1]
+    data = request.json['data']
+#    img = Image.fromarray(bytearray(data))
+    print(name)
+    f = open('./'+name, 'wb')
+    f.write(bytearray(data))
+    f.close()
+    #nparr = np.fromstring(data, np.uint8)
+
+    # decode image
+    #img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    #img.save('./'+)
+    return "ciao"
+'''
+
 @app.route('/socialdelivery/api/v1.0/getcover', methods=['GET'])
 def get_cover():
     episode_number = request.args.get('episode_number')
@@ -70,45 +97,21 @@ def deliver_episode():
     password = request.json['password'] 
     date = request.json['date']
     time = request.json['time']
-    #custom_cover_path = request.json['custom_cover']
-    print(request.json)
+    custom_cover_data = request.json.get('custom_cover_data', None)
+    custom_cover_name = request.json.get('custom_cover_name', None)
 
-    '''
-    #schedule job
-    scheduler = sched.scheduler(time_module.time, time_module.sleep)
-    t = time_module.strptime(date+' '+time, '%d-%m-%Y %H:%M')
-    t = time_module.mktime(t)
-    deploy_episode(episode_number,
-                         episode_name,
-                         post_facebook_linkedin_instagram,
-                         post_twitter,
-                         password,
-                         guests_number,
-                         mentions)
-
-    scheduler_e = scheduler.enterabs(t,
-                                     1,
-                                     deploy_episode,
-                                     argument = (episode_number,
-                                         episode_name,
-                                         post_facebook_linkedin_instagram,
-                                         post_twitter,
-                                         password,
-                                         guests_number,
-                                         mentions)
-                                     )
-
-    scheduler_e.run()
-    print("Scheduled")
-    return 200
-'''
     res = deploy_episode(episode_number,
                          episode_name,
                          post_facebook_linkedin_instagram,
                          post_twitter,
                          password,
                          guests_number,
-                         mentions)
+                         mentions,
+                         custom_cover_data,
+                         custom_cover_name,
+#                         time,
+#                         date
+                         )
 
     episode = {
         'episode_number' : episode_number,

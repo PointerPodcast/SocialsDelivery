@@ -2,10 +2,13 @@
 
 import sys
 import json
+import sched
 import base64
 import os.path
 import shutil
 import logging
+from datetime import date
+import time as time_module
 from pathlib import Path
 from PIL import Image
 from PIL import ImageFont
@@ -17,10 +20,8 @@ from utility.colors_prints import bcolors
 from PPSocials.PPfacebook import PP_facebook
 from PPSocials.PPinstagram import PP_instagram
 from PPSocials.PPtwitter import PP_twitter
+from PPSocials.PPtelegram import PP_telegram
 
-
-#TODO:
-# Schedule deploy
 
 logging.basicConfig(filename='socialDelivery.log', filemode='a', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
 
@@ -48,6 +49,7 @@ socialToClass = {
     'facebook' : PP_facebook,
     'instagram' : PP_instagram,
     'twitter' : PP_twitter,
+    'telegram' : PP_telegram
 }
 
 post_font = '/usr/share/fonts/ubuntu/UbuntuMono-BI.ttf'
@@ -81,7 +83,7 @@ def _check_max_chars_post(social, post_file_data):
             print("Twitter post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS_TWITTER)+")")
             raise Exception("Twitter post exceeds maximum length")
         if n_chars >= MAX_POST_CHARS:
-            print("Linkedin/Facebook/Instagram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
+            print("Linkedin/Facebook/Instagram/Telegram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
             raise Exception("Linkedin/Facebook/Instagram post exceeds maximum length")
     print(" >> "+social+" Post length is OK!")
 
@@ -104,6 +106,7 @@ def _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter)
         userToSocial['instagram'] = mentions_dict[guestId]['instagram']
         userToSocial['twitter'] = mentions_dict[guestId]['twitter']
         userToSocial['linkedin'] = mentions_dict[guestId]['linkedin']
+        userToSocial['telegram'] = mentions_dict[guestId]['telegram']
         for social in socialToPost.keys():
             if(userToSocial[social] == '#'):
                 continue
@@ -116,7 +119,7 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
     socialToPost = _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter)
     for social in socialToClass.keys():
         post_file_data = episode_dir / 'post' / (social+".txt")
-        if social == "instagram":
+        if social == "instagram" or social == "twitter":
             post_file_data.write_text('Pointer['+episode_number+'] '+episode_name+' \n'+pointing_hand_short_code+pointing_hand_short_code+'[LINK in BIO]\n')
             with open(post_file_data, 'a+', encoding='utf-8') as file:
                 file.write('\n'+socialToPost[social]+'\n')
@@ -124,14 +127,13 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
             post_file_data.write_text('Pointer['+episode_number+'] '+episode_name+'\n')
             with open(post_file_data, 'a+', encoding='utf-8') as file:
                 file.write('\n'+socialToPost[social]+'\n')
-            if social != 'twitter':
-                _append_podcasting_platforms_link(episode_dir, social, post_file_data) #Appending only to facebook, linkedin and twitter
+            _append_podcasting_platforms_link(episode_dir, social, post_file_data) #Appending only to facebook, linkedin and twitter
         _check_max_chars_post(social, post_file_data)
 
 
 def generate_cover(episode_dir, episode_number, episode_name, cover_file):
-    print("\n" + bcolors.HEADER + " Autogenerating cover..." + bcolors.ENDC )
-    logging.info("Autogenerating cover Episode: "+episode_number)
+    print("\n" + bcolors.HEADER + " Autogenerating Cover..." + bcolors.ENDC )
+    logging.info("Autogenerating Cover Episode: "+episode_number)
     template_cover_file = Path(COVER_TEMPLATES_PATH+'/cover_template.jpg')
     img = Image.open(template_cover_file.resolve())
     width, height = img.size
@@ -143,7 +145,9 @@ def generate_cover(episode_dir, episode_number, episode_name, cover_file):
         (255,255,255), #Color RGB
         font=font,
         align="center")
-    img.save(cover_file.resolve())
+    img.save(cover_file)
+    return cover_file
+
 
 
 def access_tokens(password):
@@ -177,14 +181,34 @@ def authenticate(password):
         return False, 'Failed auth'
     return True, 'OK'
 
-def deploy_episode(episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, password, guests_number, mentions=None, custom_cover=None):
+
+
+#prima genera cover
+def publish(episode_number, episode_dir,  cover_file, social_instances):
+    print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
+    logging.info("Posting Episode "+episode_number)
+    for social in social_instances.keys():
+        post_file_data = episode_dir / 'post' / (social+".txt")
+        post_text = post_file_data.read_text()
+        social_instances[social].publish_post(post_text, cover_file)
+
+
+def deploy_episode(episode_number,
+                   episode_name,
+                   post_facebook_linkedin_instagram,
+                   post_twitter, password, guests_number,
+                   mentions=None,
+                   custom_cover_data=None,
+                   custom_cover_name=None,
+                   time=None,
+                   date=None):
+
     if not episode_number or not episode_number or not post_facebook_linkedin_instagram or not post_twitter or not password:
         print("A value is empty")
         logging.warning("A values is empty")
         return False
 
     episode_dir = Path(EPISODES_PATH+'/'+episode_number+'/')
-    cover_file = episode_dir / str('cover_'+episode_number+'.jpg')
 
     try:
         if generate_structure_episode(episode_dir, episode_number):
@@ -196,7 +220,19 @@ def deploy_episode(episode_number, episode_name, post_facebook_linkedin_instagra
         posts_creation(episode_dir, episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, mentions)
 
         #if not custom_cover_path:
-        generate_cover(episode_dir, episode_number, episode_name, cover_file)
+        cover_file = None
+        if custom_cover_name is None: #No custom_cover has been uploaded. Thus Autogenerate it
+            cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg').resolve()
+            generate_cover(episode_dir, episode_number, episode_name, cover_file)
+        else:
+            extension = custom_cover_name.split('.')[1]
+            cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.'+extension)
+            f = open(cover_file.resolve(), 'wb')
+            f.write(bytearray(custom_cover_data))
+            f.close()
+
+        if(cover_file is None):
+            return False
 
         tokens = access_tokens(password)
         social_instances = {}
@@ -208,12 +244,27 @@ def deploy_episode(episode_number, episode_name, post_facebook_linkedin_instagra
 
         tokens = {}
 
-        print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
-        logging.info("Posting Episode "+episode_number)
-        for social in social_instances.keys():
-            post_file_data = episode_dir / 'post' / (social+".txt")
-            post_text = post_file_data.read_text()
-            social_instances[social].publish_post(post_text, str(cover_file.resolve()))
+
+        '''
+        scheduler = sched.scheduler(time_module.time, time_module.sleep)
+        t = time_module.strptime(date+' '+time, '%d-%m-%Y %H:%M')
+        t = time_module.mktime(t)
+
+        scheduler.enterabs(t,
+                             1,
+                             publish,
+                             argument = (episode_number,
+                                         episode_dir,
+                                         cover_file,
+                                         social_instances
+                                         )
+         )
+
+        scheduler.run()
+        logging.info("Episode Scheduled on: "+date+' '+time)
+        '''
+
+        #publish(episode_number, episode_dir, cover_file, social_instances)
 
     except Exception as err:
         print("Some exception has occurred. ", err)
