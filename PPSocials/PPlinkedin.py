@@ -9,8 +9,9 @@ class PP_linkedin:
     def __init__(self, token):
         if PP_linkedin.__instance__ is None:
             PP_linkedin.__instance__ = self
+            #raise Exception("Unable to login in Telegram")
         else:
-            raise Exception("PP_linkedin is singleton!")
+           # return PP_linkedin.__instance__
 
     @staticmethod
     def get_instance(token):

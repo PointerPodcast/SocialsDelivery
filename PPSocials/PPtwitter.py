@@ -18,9 +18,7 @@ class PP_twitter:
                 print(" > Twitter: Authentication OK")
             except:
                 print(" > Twitter: unable to login.")
-                exit()
-        else:
-                raise Exception("PP_twitter is singleton!")
+                raise Exception("Unable to login in Twitter")
 
     @staticmethod
     def get_instance(token):

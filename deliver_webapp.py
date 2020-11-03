@@ -2,6 +2,7 @@
 
 import sys
 import json
+import glob
 import sched
 import base64
 import os.path
@@ -55,6 +56,7 @@ socialToClass = {
 post_font = '/usr/share/fonts/ubuntu/UbuntuMono-BI.ttf'
 pointing_hand_short_code = '👉'
 
+
 def generate_structure_episode(episode_dir, episode_number):
     exist = episode_dir.is_dir()
     if not exist:
@@ -76,6 +78,8 @@ def _append_podcasting_platforms_link(episode_dir, social, post_file_data):
             file.write('\n'+key+': '+dict_podcasting_platforms_links[key]+'\n')
 
 
+
+
 def _check_max_chars_post(social, post_file_data):
     with open(post_file_data, 'r', encoding='utf-8') as file:
         n_chars = len(file.read())
@@ -88,7 +92,6 @@ def _check_max_chars_post(social, post_file_data):
     print(" >> "+social+" Post length is OK!")
 
 
-#real_name,facebook,instagram,twitter,linkedin;* --> if not present = #
 def _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter):
     socialToPost = {}
     for social in socialToClass.keys():
@@ -131,6 +134,7 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
         _check_max_chars_post(social, post_file_data)
 
 
+
 def generate_cover(episode_dir, episode_number, episode_name, cover_file):
     print("\n" + bcolors.HEADER + " Autogenerating Cover..." + bcolors.ENDC )
     logging.info("Autogenerating Cover Episode: "+episode_number)
@@ -160,6 +164,14 @@ def access_tokens(password):
         tokens[social] = crypto_utility.decrypt_file(file_access_tokens.resolve(), password)
     return tokens
 
+def get_cover_of_episode(episode_number):
+    matches = glob.glob(EPISODES_PATH + "/" + episode_number + "/cover_"+episode_number+'.*')
+    print(matches[0])
+    with open(matches[0], "rb") as image:
+        f = image.read()
+        data = bytearray(f)
+    return data 
+
 
 def delete_episode(episode_number):
     try:
@@ -172,6 +184,7 @@ def delete_episode(episode_number):
     logging.info("Removed Episode: "+episode_number)
     return True, 'OK'
 
+
 def authenticate(password):
     logging.info('Authenticating...')
     try:
@@ -180,7 +193,6 @@ def authenticate(password):
         logging.error('Failed auth!')
         return False, 'Failed auth'
     return True, 'OK'
-
 
 
 #prima genera cover
@@ -222,12 +234,12 @@ def deploy_episode(episode_number,
         #if not custom_cover_path:
         cover_file = None
         if custom_cover_name is None: #No custom_cover has been uploaded. Thus Autogenerate it
-            cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg').resolve()
+            cover_file = str(Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.jpg').resolve())
             generate_cover(episode_dir, episode_number, episode_name, cover_file)
         else:
             extension = custom_cover_name.split('.')[1]
-            cover_file = Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.'+extension)
-            f = open(cover_file.resolve(), 'wb')
+            cover_file = str(Path(EPISODES_PATH+'/'+episode_number+'/cover_'+episode_number+'.'+extension).resolve())
+            f = open(cover_file, 'wb')
             f.write(bytearray(custom_cover_data))
             f.close()
 
@@ -244,8 +256,8 @@ def deploy_episode(episode_number,
 
         tokens = {}
 
-
         '''
+
         scheduler = sched.scheduler(time_module.time, time_module.sleep)
         t = time_module.strptime(date+' '+time, '%d-%m-%Y %H:%M')
         t = time_module.mktime(t)
@@ -264,7 +276,7 @@ def deploy_episode(episode_number,
         logging.info("Episode Scheduled on: "+date+' '+time)
         '''
 
-        #publish(episode_number, episode_dir, cover_file, social_instances)
+        publish(episode_number, episode_dir, cover_file, social_instances)
 
     except Exception as err:
         print("Some exception has occurred. ", err)

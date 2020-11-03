@@ -21,14 +21,13 @@ class PP_instagram:
                 self._bot.login(
                     username = credentials[0],
                     password = credentials[1],
-                    use_cookie=True
+                    use_cookie=False,
+                    is_threaded=True
                 )
                 print(" > Instagram: Authentication OK")
             except Exception as err:
                 print(" > Instagram: unable to login. "+str(err))
-                return
-        else:
-            raise Exception("PP_instagram is singleton!")
+                raise Exception("Unable to login in Instagram")
 
     @staticmethod
     def get_instance(token):

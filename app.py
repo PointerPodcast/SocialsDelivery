@@ -15,6 +15,7 @@ from flask_cors import CORS, cross_origin
 from deliver_webapp import deploy_episode
 from deliver_webapp import authenticate
 from deliver_webapp import delete_episode
+from deliver_webapp import get_cover_of_episode
 
 app = Flask(__name__)
 CORS(app)
@@ -30,7 +31,6 @@ def index():
 def delete_episode_by_number():
     episode_number = request.json['episode_number']
     res, status = delete_episode(episode_number)
-
     message = {
         'result' : res,
         'status' : status,
@@ -42,34 +42,10 @@ def delete_episode_by_number():
         return response, 400
 
 
-'''
-@app.route('/socialdelivery/api/v1.0/postcustomcover', methods=['POST'])
-def post_customcover():
-    # convert string of image data to uint8
-    print(request.json['name'])
-    complete_file_name = request.json['name']
-    info = complete_file_name.split('.')
-    name = info[0]
-    extension = info[1]
-    data = request.json['data']
-#    img = Image.fromarray(bytearray(data))
-    print(name)
-    f = open('./'+name, 'wb')
-    f.write(bytearray(data))
-    f.close()
-    #nparr = np.fromstring(data, np.uint8)
-
-    # decode image
-    #img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    #img.save('./'+)
-    return "ciao"
-'''
-
-@app.route('/socialdelivery/api/v1.0/getcover', methods=['GET'])
-def get_cover():
-    episode_number = request.args.get('episode_number')
-    print(episode_number)
-    return episode_number
+@app.route('/socialdelivery/api/v1.0/getcover/<episode_number>', methods=['GET'])
+def get_cover(episode_number):
+    data = get_cover_of_episode(episode_number)
+    return data
 
 @app.route('/socialdelivery/api/v1.0/authenticate', methods=['POST'])
 def auth():
@@ -118,7 +94,7 @@ def deliver_episode():
         'title' : episode_name,
         'result' : res
     }
-    response = jsonify({'response':episode})
+    response = jsonify({'message':episode})
     if res == True:
         return response, 200
     else:

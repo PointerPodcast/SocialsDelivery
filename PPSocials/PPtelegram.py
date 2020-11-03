@@ -17,9 +17,7 @@ class PP_telegram:
                 print(" > Telegram: Authentication OK")
             except:
                 print(" > Telegram: unable to login.")
-                exit()
-        else:
-                raise Exception("PP_telegram is singleton!")
+                raise Exception("Unable to login in Telegram")
 
     @staticmethod
     def get_instance(token):

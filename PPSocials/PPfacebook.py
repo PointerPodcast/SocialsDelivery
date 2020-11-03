@@ -19,10 +19,8 @@ class PP_facebook:
                 print(" > Facebook: Authentication OK")
             except:
                 print(" > Facebook: unable to login.")
-                exit()
+                raise Exception("Unable to login in Facebook")
 
-        else:
-            raise Exception("PP_facebook is singleton!")
 
     @staticmethod
     def get_instance(token):

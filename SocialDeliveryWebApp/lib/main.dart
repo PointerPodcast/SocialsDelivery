@@ -1,13 +1,15 @@
 import 'dart:convert';
 import 'dart:core';
-import 'dart:typed_data';
-import 'dart:io';
+import 'dart:html' as html;
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter_beautiful_popup/main.dart';
+import 'package:flutter_beautiful_popup/templates/Fail.dart';
+import 'package:flutter_beautiful_popup/templates/GreenRocket.dart';
 import './PlusMinusCounter.dart';
 
 void main() {
@@ -46,15 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
     static final String port = "5000";
     final String auth_url = "http://$ip:$port/socialdelivery/api/v1.0/authenticate";
     final String deploy_url = "http://$ip:$port/socialdelivery/api/v1.0/deliverepisode";
+    final String get_cover_url = "http://$ip:$port/socialdelivery/api/v1.0/getcover/";
     final String post_custom_cover_url = "http://$ip:$port/socialdelivery/api/v1.0/postcustomcover";
 
     String FLI_fieldName = "Facebook/Instagram/Linkedin Post";
-    int FLI_maxLenght = 700-118; //il 118 è per i link a spotify ecc
+    int FLI_maxLenght = 700-125; //il 118 è per i link a spotify ecc
     int FLI_MaxLines = 7;
     TextEditingController FLI_controller = new TextEditingController();
 
     String Twitter_fieldName = "Twitter Post";
-    int Twitter_maxLenght = 280-17; //13 è per [Link in BIO]
+    int Twitter_maxLenght = 280-26; //13 è per [Link in BIO]
     int Twitter_maxLines = 7;
     TextEditingController Twitter_controller = new TextEditingController();
 
@@ -67,6 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
     int episodeNumberMaxLenght = 4;
     int episodeNumberMaxLines = 1;
     TextEditingController episodeNumberController = new TextEditingController();
+
+    String episodeNumberGetCoverFieldName = "Episode Number";
+    int episodeNumberGetCoverMaxLenght = 4;
+    int episodeNumberGetCoverMaxLines = 1;
+    TextEditingController episodeNumberGetCoverController = new TextEditingController();
     
     String passwordFieldName = "Password";
     int passwordMaxLenght = 20;
@@ -84,6 +92,8 @@ class _MyHomePageState extends State<MyHomePage> {
     PlatformFile platformFile;
     Image image;
     FilePickerResult result;
+
+    Image imageCover;
 
     void initState() {
         super.initState();
@@ -152,6 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
     }
 
+
     Future<http.Response> postAuth(String password){
         return http.post(
                 auth_url,
@@ -186,24 +197,59 @@ class _MyHomePageState extends State<MyHomePage> {
         );
     }
 
+    void getCover(String episodeNumber) async{
+        print(get_cover_url+episodeNumber);
+        http.Response res = await http.get(
+                get_cover_url+episodeNumber,
+                headers: <String, String>{
+                    'Content-Type': 'application/json; charset=UTF-8',
+                });
+        setState(() {
+                  imageCover = Image.memory(res.bodyBytes);
+                });
+        /*
+        final blob = html.Blob(res.bodyBytes);
+        final url = html.Url.createObjectUrlFromBlob(blob);
+        final anchor = html.document.createElement('a') as html.AnchorElement
+                ..href = url
+                ..style.display = 'none'
+                ..download = 'ciao_mondo.jpg';
+        html.document.body.children.add(anchor);
+        anchor.click();
+        html.document.body.children.remove(anchor);
+        html.Url.revokeObjectUrl(url);
+        */
+    }
 
-    void deliveryButton() async{
-        Map infoMapper = inputFormatter();
-        print(infoMapper.toString());
-        http.Response authResponse = await postAuth(infoMapper['password']);
-        Map decoded = jsonDecode(authResponse.body);
-        bool auth_is_ok = decoded['message']['result'];
-        print(auth_is_ok);
-        http.Response deliveryResponse;
-        if( auth_is_ok ){
-            if(result != null){
-                    infoMapper['custom_cover_name'] = platformFile.name;
-                    infoMapper['custom_cover_data'] = platformFile.bytes;
-            }
-            deliveryResponse = await postDelivery(infoMapper);
-            var res2 = jsonDecode(deliveryResponse.body);
-            print(res2);
-        }
+    showPopupOK(context, String title, String content){
+        final popupOk = BeautifulPopup(
+                context: context,
+                template: TemplateGreenRocket,
+                );
+        popupOk.show(
+                title: title,
+                content: content,
+                actions: [
+                    popupOk.button(
+                        label: 'Close',
+                        onPressed: Navigator.of(context).pop,
+                    )
+                ],
+        );
+    }
+
+    showPopupFail(context, String title, String content){
+        final popupOk = BeautifulPopup(context: context, template: TemplateFail);
+        popupOk.show(
+                title: title,
+                content: content,
+                actions: [
+                    popupOk.button(
+                        label: 'Close',
+                        onPressed: Navigator.of(context).pop,
+                    )
+                ],
+        );
     }
 
 
@@ -249,8 +295,8 @@ class _MyHomePageState extends State<MyHomePage> {
         infoMapper['password'] = password;
 
         if ( episodeNumber.isEmpty || title.isEmpty || fliPost.isEmpty || twitterPost.isEmpty || date.isEmpty || time.isEmpty || password.isEmpty){
-                //TODO: lanciare un popup
-                throw new FormatException("Some value not entered"); 
+                showPopupFail(context, "Missing Values", "Check that each field has been filled");
+                return infoMapper = null;
         }
 
         int id = 0;
@@ -259,8 +305,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Map<String,String> socialsTag = new Map();
 
             String realName = g.nameSurnameController.text.trim();
-            if(realName.isEmpty)
-                throw new FormatException("No real name");
+            if(realName.isEmpty){
+                showPopupFail(context, "Missing Real Name", "Please fill the field");
+                return infoMapper = null;
+            }
 
             String facebook = g.facebookController.text.trim();
 
@@ -300,6 +348,36 @@ class _MyHomePageState extends State<MyHomePage> {
         infoMapper['guests'] = guestsToId;
         return infoMapper;
     }
+
+
+
+    void deliveryButton(context) async{
+        Map infoMapper = inputFormatter();
+        if(infoMapper == null)
+            return;
+        http.Response authResponse = await postAuth(infoMapper['password']);
+        Map decoded = jsonDecode(authResponse.body);
+        bool authIsOk = decoded['message']['result'];
+        http.Response deliveryResponse;
+        if( authIsOk ){
+            if(result != null){
+                    infoMapper['custom_cover_name'] = platformFile.name;
+                    infoMapper['custom_cover_data'] = platformFile.bytes;
+            }
+            deliveryResponse = await postDelivery(infoMapper);
+            var resData = jsonDecode(deliveryResponse.body)['message'];
+            bool resultData = resData['result'];
+            String title = resData['title'];
+            String episodeNumber = resData['episode_number'];
+            if(resultData == true)
+                showPopupOK(context, "Delivered Pointer[$episodeNumber]!", "Posts are on the way!\nPointer[$episodeNumber] $title");
+            else
+                showPopupFail(context, "NOT DELIVERED", "Some problems occurred");
+        }else{
+            showPopupFail(context, "Failed Authentication", "Is the password correct?");
+        }
+    }
+
 
 
 
@@ -658,7 +736,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     child: RaisedButton(
                                                         textColor: Colors.white,
                                                         color : Colors.pinkAccent,
-                                                        onPressed: deliveryButton,
+                                                        onPressed: () => deliveryButton(context),
                                                         child: Text("Deliver!",
                                                                        style: TextStyle(
                                                                                fontSize: 30,
@@ -668,6 +746,65 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     ),
                                                 ),
                                             ]
+                                    ),
+                                    Container(
+                                            height: 10,
+                                            width: double.infinity,
+                                            color: Colors.blueAccent
+                                    ),
+                                    Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                            Padding(
+                                                padding: EdgeInsets.all(30),
+                                                child: Container(
+                                                        height: imageCover == null ? 30 : imageCover.height,
+                                                        child: Center(
+                                                            child:  imageCover == null
+                                                                ? Text('No image selected.')
+                                                                : imageCover,
+                                                          ),
+                                                        ),
+                                            ),
+                                            Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                    children: [
+                                                            Flexible(
+                                                                    flex: 4,
+                                                                    child:  Padding(
+                                                                        padding: EdgeInsets.all(50),
+                                                                        child: SocialDeliveryTextField(
+                                                                            fieldName: episodeNumberGetCoverFieldName,
+                                                                            maxLength: episodeNumberGetCoverMaxLenght,
+                                                                            maxLines: episodeNumberGetCoverMaxLines,
+                                                                            border: false,
+                                                                            onlyNumber: true,
+                                                                            controller: episodeNumberGetCoverController,
+                                                                            onEditingComplete: (){
+                                                                                if (episodeNumberGetCoverController.text.isEmpty)
+                                                                                    setSomethingIsEmpty(true);
+                                                                                else
+                                                                                    setSomethingIsEmpty(false);
+                                                                            }
+                                                                        ),
+                                                                    ),
+                                                            ),
+                                                            Padding(
+                                                                padding: EdgeInsets.all(20),
+                                                                child: RaisedButton(
+                                                                        textColor: Colors.white,
+                                                                        color : Colors.blueAccent,
+                                                                        onPressed: () => getCover(episodeNumberGetCoverController.text),
+                                                                        child: Text("Get Cover",
+                                                                                       style: TextStyle(
+                                                                                               fontSize: 20,
+                                                                                       )
+                                                                                ),
+                                                                    ),
+                                                            ),
+                                                        ]
+                                                    ),
+                                        ]
                                     ),
                                 ],
                         ),
