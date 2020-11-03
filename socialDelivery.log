@@ -1814,3 +1814,1947 @@ instabot version: 0.117.0 - 2020-11-03 02:20:27,387 - INFO - Photo '/home/alessa
 werkzeug - 2020-11-03 02:20:28,492 - INFO - 127.0.0.1 - - [03/Nov/2020 02:20:28] "[37mPOST /socialdelivery/api/v1.0/deliverepisode HTTP/1.1[0m" 200 -
 instabot version: 0.117.0 - 2020-11-03 02:21:33,826 - DEBUG - Saving Checkpoint file to: /home/alessandro/Github/SocialsDelivery/config/pointerpodcast.checkpoint
 instabot version: 0.117.0 - 2020-11-03 02:21:33,829 - INFO - Total requests: 63
+werkzeug - 2020-11-03 10:31:33,631 - INFO -  * Running on http://127.0.0.1:5151/ (Press CTRL+C to quit)
+app - 2020-11-03 10:33:01,430 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("./SocialDeliveryWebApp/build/web/index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./SocialDeliveryWebApp/build/web/index.html
+werkzeug - 2020-11-03 10:33:01,433 - INFO - 127.0.0.1 - - [03/Nov/2020 10:33:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:33:01,648 - INFO - 127.0.0.1 - - [03/Nov/2020 10:33:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:33:21,979 - INFO -  * Running on http://127.0.0.1:5151/ (Press CTRL+C to quit)
+app - 2020-11-03 10:33:24,114 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("./SocialDeliveryWebApp/build/web/index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./SocialDeliveryWebApp/build/web/index.html
+werkzeug - 2020-11-03 10:33:24,115 - INFO - 127.0.0.1 - - [03/Nov/2020 10:33:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:33:44,043 - INFO -  * Running on http://127.0.0.1:5151/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:33:48,119 - INFO - 127.0.0.1 - - [03/Nov/2020 10:33:48] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:34:17,160 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:34:25,749 - ERROR - 127.0.0.1 - - [03/Nov/2020 10:34:25] code 400, message Bad request version ("Uî'")
+werkzeug - 2020-11-03 10:34:25,750 - INFO - 127.0.0.1 - - [03/Nov/2020 10:34:25] "[35m[1m  üã³£_#ÎçÙ2õÍçÂI®¯3Uî'[0m" HTTPStatus.BAD_REQUEST -
+werkzeug - 2020-11-03 10:34:28,981 - ERROR - 127.0.0.1 - - [03/Nov/2020 10:34:28] code 400, message Bad request version ('\x05²¯¬6')
+werkzeug - 2020-11-03 10:34:28,981 - INFO - 127.0.0.1 - - [03/Nov/2020 10:34:28] "[35m[1m  ü«­ýýÔ&,#Ñé;U2¤6±©UV8ZXúTþ ²¯¬6[0m" HTTPStatus.BAD_REQUEST -
+app - 2020-11-03 10:34:38,176 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("./SocialDeliveryWebApp/build/web/index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./SocialDeliveryWebApp/build/web/index.html
+werkzeug - 2020-11-03 10:34:38,178 - INFO - 127.0.0.1 - - [03/Nov/2020 10:34:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:34:38,353 - INFO - 127.0.0.1 - - [03/Nov/2020 10:34:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:40:56,914 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 10:41:06,756 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("./SocialDeliveryWebApp/build/web")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./SocialDeliveryWebApp/build/web
+werkzeug - 2020-11-03 10:41:06,759 - INFO - 127.0.0.1 - - [03/Nov/2020 10:41:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:45:59,474 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./SocialDeliveryWebApp/build/web
+werkzeug - 2020-11-03 10:45:59,474 - INFO - 127.0.0.1 - - [03/Nov/2020 10:45:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:46:05,810 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 10:46:09,278 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:46:09,280 - INFO - 127.0.0.1 - - [03/Nov/2020 10:46:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:46:10,126 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:46:10,127 - INFO - 127.0.0.1 - - [03/Nov/2020 10:46:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:46:10,359 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:46:10,360 - INFO - 127.0.0.1 - - [03/Nov/2020 10:46:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:46:10,560 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:46:10,561 - INFO - 127.0.0.1 - - [03/Nov/2020 10:46:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:47:42,684 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 10:47:48,655 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:47:48,658 - INFO - 127.0.0.1 - - [03/Nov/2020 10:47:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:47:49,450 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:47:49,451 - INFO - 127.0.0.1 - - [03/Nov/2020 10:47:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:47:49,683 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:47:49,684 - INFO - 127.0.0.1 - - [03/Nov/2020 10:47:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:47:49,881 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:47:49,882 - INFO - 127.0.0.1 - - [03/Nov/2020 10:47:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:47:50,064 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:47:50,065 - INFO - 127.0.0.1 - - [03/Nov/2020 10:47:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:48:28,061 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 10:48:30,510 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:48:30,512 - INFO - 127.0.0.1 - - [03/Nov/2020 10:48:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:48:31,210 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:48:31,211 - INFO - 127.0.0.1 - - [03/Nov/2020 10:48:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:48:31,732 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:48:31,734 - INFO - 127.0.0.1 - - [03/Nov/2020 10:48:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:48:32,091 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:48:32,092 - INFO - 127.0.0.1 - - [03/Nov/2020 10:48:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:48:32,374 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:48:32,375 - INFO - 127.0.0.1 - - [03/Nov/2020 10:48:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:49:06,312 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:49:10,562 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:10] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:10,589 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:10] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:10,693 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:10] "[33mGET /icons/Icon-192.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:10,695 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:10] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:10,707 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:10] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:20,094 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:20,130 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:20,232 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:20,744 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:20,779 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:20,882 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:20] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,301 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:21,333 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,444 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,496 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:21,531 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,644 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,660 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:21,727 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:21,835 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:23,622 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:23] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:49:23,645 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:23] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:49:23,759 - INFO - 127.0.0.1 - - [03/Nov/2020 10:49:23] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:50:16,861 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:50:18,584 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:18] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:50:18,624 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:18] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:50:18,728 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:18] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:50:19,352 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:19] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:50:19,382 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:19] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:50:19,493 - INFO - 127.0.0.1 - - [03/Nov/2020 10:50:19] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:51:33,840 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 10:51:37,782 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:51:37,784 - INFO - 127.0.0.1 - - [03/Nov/2020 10:51:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 10:51:38,671 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 10:51:38,672 - INFO - 127.0.0.1 - - [03/Nov/2020 10:51:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 10:51:54,710 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:51:55,628 - INFO - 127.0.0.1 - - [03/Nov/2020 10:51:55] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:51:55,675 - INFO - 127.0.0.1 - - [03/Nov/2020 10:51:55] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:51:55,821 - INFO - 127.0.0.1 - - [03/Nov/2020 10:51:55] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:52:10,009 - INFO - 127.0.0.1 - - [03/Nov/2020 10:52:10] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:52:10,067 - INFO - 127.0.0.1 - - [03/Nov/2020 10:52:10] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:52:10,143 - INFO - 127.0.0.1 - - [03/Nov/2020 10:52:10] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:52:10,153 - INFO - 127.0.0.1 - - [03/Nov/2020 10:52:10] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:52:10,154 - INFO - 127.0.0.1 - - [03/Nov/2020 10:52:10] "[33mGET /manifest.json HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:53:07,958 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:53:10,939 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:10] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:53:11,032 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:11] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:53:11,203 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:11] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:53:52,599 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:53:54,004 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:54] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:53:54,048 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:54] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:53:54,268 - INFO - 127.0.0.1 - - [03/Nov/2020 10:53:54] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:58:03,948 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 10:58:07,580 - INFO - 127.0.0.1 - - [03/Nov/2020 10:58:07] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:58:07,672 - INFO - 127.0.0.1 - - [03/Nov/2020 10:58:07] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:58:07,823 - INFO - 127.0.0.1 - - [03/Nov/2020 10:58:07] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:59:32,843 - INFO - 127.0.0.1 - - [03/Nov/2020 10:59:32] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 10:59:32,882 - INFO - 127.0.0.1 - - [03/Nov/2020 10:59:32] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 10:59:33,081 - INFO - 127.0.0.1 - - [03/Nov/2020 10:59:33] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:00:24,316 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:00:26,404 - INFO - 127.0.0.1 - - [03/Nov/2020 11:00:26] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:00:26,442 - INFO - 127.0.0.1 - - [03/Nov/2020 11:00:26] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:00:26,634 - INFO - 127.0.0.1 - - [03/Nov/2020 11:00:26] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:04:33,331 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:04:35,373 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:04:35,375 - INFO - 127.0.0.1 - - [03/Nov/2020 11:04:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:04:36,627 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:04:36,628 - INFO - 127.0.0.1 - - [03/Nov/2020 11:04:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:05:31,784 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:05:33,952 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:05:33,954 - INFO - 127.0.0.1 - - [03/Nov/2020 11:05:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:05:38,403 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:05:38,404 - INFO - 127.0.0.1 - - [03/Nov/2020 11:05:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:06:07,096 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:06:08,355 - INFO - 127.0.0.1 - - [03/Nov/2020 11:06:08] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:06:08,405 - INFO - 127.0.0.1 - - [03/Nov/2020 11:06:08] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:06:08,648 - INFO - 127.0.0.1 - - [03/Nov/2020 11:06:08] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:06:52,239 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:06:54,407 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:06:54,409 - INFO - 127.0.0.1 - - [03/Nov/2020 11:06:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:08:32,516 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:08:34,755 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:08:34,758 - INFO - 127.0.0.1 - - [03/Nov/2020 11:08:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:08:36,224 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:08:36,225 - INFO - 127.0.0.1 - - [03/Nov/2020 11:08:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:08:37,405 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:08:37,406 - INFO - 127.0.0.1 - - [03/Nov/2020 11:08:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:08:37,714 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:08:37,715 - INFO - 127.0.0.1 - - [03/Nov/2020 11:08:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:09:50,508 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:09:53,171 - INFO - 127.0.0.1 - - [03/Nov/2020 11:09:53] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:09:53,216 - INFO - 127.0.0.1 - - [03/Nov/2020 11:09:53] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:09:53,428 - INFO - 127.0.0.1 - - [03/Nov/2020 11:09:53] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:11:34,069 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:11:46,231 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:11:46,232 - INFO - 127.0.0.1 - - [03/Nov/2020 11:11:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:11:58,283 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 28, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:11:58,284 - INFO - 127.0.0.1 - - [03/Nov/2020 11:11:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:12:55,142 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:13:26,344 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:13:54,812 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:13:58,741 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:13:58,743 - INFO - 127.0.0.1 - - [03/Nov/2020 11:13:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:13:59,653 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:13:59,654 - INFO - 127.0.0.1 - - [03/Nov/2020 11:13:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:14:00,558 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:14:00,559 - INFO - 127.0.0.1 - - [03/Nov/2020 11:14:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:14:00,811 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:14:00,812 - INFO - 127.0.0.1 - - [03/Nov/2020 11:14:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:14:01,020 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:14:01,021 - INFO - 127.0.0.1 - - [03/Nov/2020 11:14:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:14:12,830 - INFO - 127.0.0.1 - - [03/Nov/2020 11:14:12] "[33mGET /website/favicon.ico HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:16:45,793 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:17:43,161 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:17:47,552 - INFO - 127.0.0.1 - - [03/Nov/2020 11:17:47] "[33mGET /website/favicon.ico HTTP/1.1[0m" 404 -
+app - 2020-11-03 11:17:50,465 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:17:50,468 - INFO - 127.0.0.1 - - [03/Nov/2020 11:17:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:18:20,754 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:18:23,302 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:18:23,305 - INFO - 127.0.0.1 - - [03/Nov/2020 11:18:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:18:25,392 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 29, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:18:25,393 - INFO - 127.0.0.1 - - [03/Nov/2020 11:18:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:20:12,989 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:20:18,029 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:20:18,032 - INFO - 127.0.0.1 - - [03/Nov/2020 11:20:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:21:28,199 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:21:32,170 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:21:32,172 - INFO - 127.0.0.1 - - [03/Nov/2020 11:21:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:23:26,139 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:23:30,164 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:30,167 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:23:30,942 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:30,943 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:23:31,849 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:31,850 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:23:32,282 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:32,283 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:23:49,705 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:23:51,830 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:51,832 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:23:52,763 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:52,764 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:23:53,422 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 32, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:23:53,423 - INFO - 127.0.0.1 - - [03/Nov/2020 11:23:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:26:15,123 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:26:18,594 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:26:18,597 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:26:19,699 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:26:19,700 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+app - 2020-11-03 11:26:21,774 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:26:21,775 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:26:40,009 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:26:41,741 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:41] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:26:41,783 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:41] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:26:41,968 - INFO - 127.0.0.1 - - [03/Nov/2020 11:26:41] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:27:43,445 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:27:45,106 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:45] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:27:45,150 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:45] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:27:45,352 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:45] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:27:46,103 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:46] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:27:46,153 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:46] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:27:46,306 - INFO - 127.0.0.1 - - [03/Nov/2020 11:27:46] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:30,066 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:28:31,831 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:31] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:28:31,884 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:31] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:32,072 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:32] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:34,747 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:34] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:28:34,791 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:34] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:34,947 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:34] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:55,462 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:28:56,897 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:56] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:28:56,942 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:56] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:28:57,103 - INFO - 127.0.0.1 - - [03/Nov/2020 11:28:57] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:29:06,591 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:06] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:29:06,631 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:06] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:29:06,800 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:06] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:29:45,892 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:29:48,061 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:48] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:29:48,109 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:48] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:29:48,274 - INFO - 127.0.0.1 - - [03/Nov/2020 11:29:48] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:02,705 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+werkzeug - 2020-11-03 11:34:05,183 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:05] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:34:05,234 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:05] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:05,426 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:05] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:21,721 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:21] "[37mGET / HTTP/1.1[0m" 200 -
+werkzeug - 2020-11-03 11:34:21,762 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:21] "[33mGET /main.dart.js HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:21,833 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:21,844 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:21] "[33mGET /manifest.json HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:21,845 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:26,418 - INFO - 127.0.0.1 - - [03/Nov/2020 11:34:26] "[33mGET /manifest.json HTTP/1.1[0m" 404 -
+werkzeug - 2020-11-03 11:34:58,714 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+app - 2020-11-03 11:35:10,193 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alessandro/Github/SocialsDelivery/app.py", line 31, in index
+    return render_template("index.html")
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/alessandro/Github/SocialsDelivery/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+werkzeug - 2020-11-03 11:35:10,196 - INFO - 127.0.0.1 - - [03/Nov/2020 11:35:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+werkzeug - 2020-11-03 11:35:10,353 - INFO - 127.0.0.1 - - [03/Nov/2020 11:35:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

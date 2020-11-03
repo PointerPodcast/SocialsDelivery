@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import json
 import sched
 import time as time_module
@@ -11,20 +12,23 @@ from threading import Thread
 from flask import Flask
 from flask import request
 from flask import jsonify
+from flask import render_template
 from flask_cors import CORS, cross_origin
 from deliver_webapp import deploy_episode
 from deliver_webapp import authenticate
 from deliver_webapp import delete_episode
 from deliver_webapp import get_cover_of_episode
 
-app = Flask(__name__)
+website_path = os.path.join(os.getcwd(), 'website')
+app = Flask(__name__, root_path=website_path)
 CORS(app)
 
 #TODO: avoid to pass psw in clear
+print(app.root_path)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
-    return "Hello, SocialDelivery!"
+    return render_template("index.html")
 
 
 @app.route('/socialdelivery/api/v1.0/deleteepisode', methods=['PUT'])
@@ -103,5 +107,5 @@ def deliver_episode():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(port=5000)
 
