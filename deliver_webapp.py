@@ -256,7 +256,6 @@ def deploy_episode(episode_number,
 
         tokens = {}
 
-        '''
 
         scheduler = sched.scheduler(time_module.time, time_module.sleep)
         t = time_module.strptime(date+' '+time, '%d-%m-%Y %H:%M')
@@ -272,11 +271,10 @@ def deploy_episode(episode_number,
                                          )
          )
 
-        scheduler.run()
         logging.info("Episode Scheduled on: "+date+' '+time)
-        '''
+        scheduler.run()
 
-        publish(episode_number, episode_dir, cover_file, social_instances)
+        #publish(episode_number, episode_dir, cover_file, social_instances)
 
     except Exception as err:
         print("Some exception has occurred. ", err)

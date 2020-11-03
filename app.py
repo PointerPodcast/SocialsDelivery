@@ -85,8 +85,8 @@ def deliver_episode():
                          mentions,
                          custom_cover_data,
                          custom_cover_name,
-#                         time,
-#                         date
+                         time,
+                         date
                          )
 
     episode = {
