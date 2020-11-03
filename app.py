@@ -12,23 +12,20 @@ from threading import Thread
 from flask import Flask
 from flask import request
 from flask import jsonify
-from flask import render_template
 from flask_cors import CORS, cross_origin
 from deliver_webapp import deploy_episode
 from deliver_webapp import authenticate
 from deliver_webapp import delete_episode
 from deliver_webapp import get_cover_of_episode
 
-website_path = os.path.join(os.getcwd(), 'website')
-app = Flask(__name__, root_path=website_path)
+app = Flask(__name__)
 CORS(app)
 
 #TODO: avoid to pass psw in clear
-print(app.root_path)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return "Welcome!"
 
 
 @app.route('/socialdelivery/api/v1.0/deleteepisode', methods=['PUT'])
@@ -107,5 +104,5 @@ def deliver_episode():
 
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host='62.171.188.29', port=5150)
 

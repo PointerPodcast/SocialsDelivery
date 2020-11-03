@@ -53,7 +53,7 @@ socialToClass = {
     'telegram' : PP_telegram
 }
 
-post_font = '/usr/share/fonts/ubuntu/UbuntuMono-BI.ttf'
+post_font = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf'
 pointing_hand_short_code = '👉'
 
 
@@ -144,7 +144,7 @@ def generate_cover(episode_dir, episode_number, episode_name, cover_file):
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype(post_font, 50) #font-file, font-size)
     draw.text(
-        (width / 2,  height / 2), #Coordinates
+        (0,  height / 2), #Coordinates
         "Pointer["+episode_number+"]\n"+episode_name, #Text
         (255,255,255), #Color RGB
         font=font,
@@ -256,6 +256,7 @@ def deploy_episode(episode_number,
 
         tokens = {}
 
+        '''
 
         scheduler = sched.scheduler(time_module.time, time_module.sleep)
         t = time_module.strptime(date+' '+time, '%d-%m-%Y %H:%M')
@@ -273,6 +274,7 @@ def deploy_episode(episode_number,
 
         logging.info("Episode Scheduled on: "+date+' '+time)
         scheduler.run()
+        '''
 
         #publish(episode_number, episode_dir, cover_file, social_instances)
 
