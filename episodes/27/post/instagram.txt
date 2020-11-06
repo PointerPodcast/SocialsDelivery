@@ -1,0 +1,10 @@
+Pointer[27] Un'overview su Flutter con Emanuel Tesoriello 
+👉👉[LINK in BIO]
+
+Rieccoci qua con un nuovo super ospite! @emanuel_tesoriello, CEO & CoFounder di @code_valhalla!
+Emanuel è ragazzo giovane ed intraprendente. E' uno di quelli che, di voglia di fare, ne ha da vendere!
+
+Oggi ci racconta di un framework con cui lui lavora abitualmente e che sta prendendo sempre più piede: Flutter.
+In questa puntata, Emanuel ci fornisce un sacco di hint sul come utilizzarlo al meglio!
+
+Abbiamo anche fatto una piccola riflessione sul NoCoding e di quali sono potenzialità e limiti.

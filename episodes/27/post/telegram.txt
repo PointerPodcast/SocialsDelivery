@@ -1,0 +1,13 @@
+Pointer[27] Un'overview su Flutter con Emanuel Tesoriello
+
+Rieccoci qua con un nuovo super ospite! @Manuel_12013, CEO & CoFounder di CodeValhalla!
+Emanuel è ragazzo giovane ed intraprendente. E' uno di quelli che, di voglia di fare, ne ha da vendere!
+
+Oggi ci racconta di un framework con cui lui lavora abitualmente e che sta prendendo sempre più piede: Flutter.
+In questa puntata, Emanuel ci fornisce un sacco di hint sul come utilizzarlo al meglio!
+
+Abbiamo anche fatto una piccola riflessione sul NoCoding e di quali sono potenzialità e limiti.
+
+Spotify: https://open.spotify.com/show/3XmDzcZv4rCIx1VpWrbrkh
+
+ApplePodcast: https://podcasts.apple.com/it/podcast/pointerpodcast/id1465505870

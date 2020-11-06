@@ -3,7 +3,7 @@ from linkedin_v2 import linkedin
 APPLICATON_KEY    = '77jpfeat9zvo6p'
 APPLICATON_SECRET = 'Z7ExiOcp5QLqivrY'
 
-RETURN_URL = 'https://localhost:8000'
+RETURN_URL = 'http://pointerpodcast.it:5151'
 
 
 authentication = linkedin.LinkedInAuthentication(
