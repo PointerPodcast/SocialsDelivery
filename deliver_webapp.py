@@ -41,10 +41,12 @@ content_types = ['post', 'story']
 #socials_post = ['facebook', 'linkedin', 'instagram', 'twitter']
 #story_post = ['instagram', 'linkedin']
 
+
 dict_podcasting_platforms_links = {
-    'Spotify': 'https://open.spotify.com/show/3XmDzcZv4rCIx1VpWrbrkh', #Spotify
-    'ApplePodcast' : 'https://podcasts.apple.com/it/podcast/pointerpodcast/id1465505870', #ApplePodcast
+    'Spotify': 'spoti.fi/3eAW0lG', #Spotify
+    'ApplePodcast' : 'apple.co/3exnGHU', #ApplePodcast
 }
+
 
 socialToClass = {
     'facebook' : PP_facebook,
@@ -85,10 +87,10 @@ def _check_max_chars_post(social, post_file_data):
         n_chars = len(file.read())
         if social == "twitter" and n_chars > MAX_POST_CHARS_TWITTER:
             print("Twitter post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS_TWITTER)+")")
-            raise Exception("Twitter post exceeds maximum length")
+            raise Exception("Twitter post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS_TWITTER)+")")
         if n_chars >= MAX_POST_CHARS:
             print("Linkedin/Facebook/Instagram/Telegram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
-            raise Exception("Linkedin/Facebook/Instagram post exceeds maximum length")
+            raise Exception("Linkedin/Facebook/Instagram post exceeds maximum length ("+str(n_chars - MAX_POST_CHARS)+")")
     print(" >> "+social+" Post length is OK!")
 
 
@@ -122,7 +124,7 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
     socialToPost = _mentions_remapper(mentions, post_facebook_linkedin_instagram, post_twitter)
     for social in socialToClass.keys():
         post_file_data = episode_dir / 'post' / (social+".txt")
-        if social == "instagram" or social == "twitter":
+        if social == "instagram": 
             post_file_data.write_text('Pointer['+episode_number+'] '+episode_name+' \n'+pointing_hand_short_code+pointing_hand_short_code+'[LINK in BIO]\n')
             with open(post_file_data, 'a+', encoding='utf-8') as file:
                 file.write('\n'+socialToPost[social]+'\n')
@@ -138,18 +140,22 @@ def posts_creation(episode_dir, episode_number, episode_name, post_facebook_link
 def generate_cover(episode_dir, episode_number, episode_name, cover_file):
     print("\n" + bcolors.HEADER + " Autogenerating Cover..." + bcolors.ENDC )
     logging.info("Autogenerating Cover Episode: "+episode_number)
-    template_cover_file = Path(COVER_TEMPLATES_PATH+'/cover_template.jpg')
-    img = Image.open(template_cover_file.resolve())
-    width, height = img.size
-    draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype(post_font, 50) #font-file, font-size)
-    draw.text(
-        (0,  height / 2), #Coordinates
-        "Pointer["+episode_number+"]\n"+episode_name, #Text
-        (255,255,255), #Color RGB
-        font=font,
-        align="center")
-    img.save(cover_file)
+    try:
+        template_cover_file = Path(COVER_TEMPLATES_PATH+'/cover_template.jpg')
+        img = Image.open(template_cover_file.resolve())
+        width, height = img.size
+        draw = ImageDraw.Draw(img)
+        font = ImageFont.truetype(post_font, 50) #font-file, font-size)
+        draw.text(
+            (0,  height / 2), #Coordinates
+            "Pointer["+episode_number+"]\n"+episode_name, #Text
+            (255,255,255), #Color RGB
+            font=font,
+            align="center")
+        img.save(cover_file)
+    except Exception as err:
+        logging.error(err)
+        raise Exception(err)
     return cover_file
 
 
@@ -161,16 +167,25 @@ def access_tokens(password):
     for file_access_tokens in dir_access_tokens.iterdir():
         social = file_access_tokens.stem
         print("  - "+social)
-        tokens[social] = crypto_utility.decrypt_file(file_access_tokens.resolve(), password)
+        try:
+            tokens[social] = crypto_utility.decrypt_file(file_access_tokens.resolve(), password)
+        except Exception:
+            logging.error('Failed Access Tokens Decryption')
+            raise Exception('Failed Access Tokens Decryption')
     return tokens
+
+
 
 def get_cover_of_episode(episode_number):
     matches = glob.glob(EPISODES_PATH + "/" + episode_number + "/cover_"+episode_number+'.*')
     print(matches[0])
-    with open(matches[0], "rb") as image:
-        f = image.read()
-        data = bytearray(f)
-    return data 
+    try:
+        with open(matches[0], "rb") as image:
+            f = image.read()
+            data = bytearray(f)
+    except Exception:
+        return False, 0
+    return True, data 
 
 
 def delete_episode(episode_number):
@@ -179,10 +194,10 @@ def delete_episode(episode_number):
         shutil.rmtree(episode_delete)
     except Exception as err:
         logging.error(err)
-        return False, err
+        return False, str(err)
     print("Removed Episode: "+episode_number)
     logging.info("Removed Episode: "+episode_number)
-    return True, 'OK'
+    return True, 'Episode '+episode_number+' Deleted!'
 
 
 def authenticate(password):
@@ -196,7 +211,10 @@ def authenticate(password):
 
 
 #prima genera cover
-def publish(episode_number, episode_dir,  cover_file, social_instances):
+def publish(episode_number, episode_dir, cover_file, social_instances):
+    exist = episode_dir.is_dir()
+    if not exist:
+        return
     print(bcolors.OKGREEN + "Posting..." + bcolors.ENDC)
     logging.info("Posting Episode "+episode_number)
     for social in social_instances.keys():
@@ -218,7 +236,7 @@ def deploy_episode(episode_number,
     if not episode_number or not episode_number or not post_facebook_linkedin_instagram or not post_twitter or not password:
         print("A value is empty")
         logging.warning("A values is empty")
-        return False
+        return False, 'A value is empty'
 
     episode_dir = Path(EPISODES_PATH+'/'+episode_number+'/')
 
@@ -226,7 +244,7 @@ def deploy_episode(episode_number,
         if generate_structure_episode(episode_dir, episode_number):
             print("Already present episode: "+episode_number)
             logging.error("Already present episode: "+episode_number)
-            return False
+            return False, 'Episode Already Present'
 
         #Create posts
         posts_creation(episode_dir, episode_number, episode_name, post_facebook_linkedin_instagram, post_twitter, mentions)
@@ -272,14 +290,14 @@ def deploy_episode(episode_number,
          )
 
         logging.info("Episode Scheduled on: "+date+' '+time)
-        scheduler.run()
+        scheduler.run(blocking=False)
 
         #publish(episode_number, episode_dir, cover_file, social_instances)
 
     except Exception as err:
         print("Some exception has occurred. ", err)
         logging.error("Some exception has occurred. "+ str(err))
-        return False
+        return False, str(err)
 
-    return True
+    return True, "OK"
 

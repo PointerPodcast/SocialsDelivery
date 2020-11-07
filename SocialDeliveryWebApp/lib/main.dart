@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:core';
+import 'dart:typed_data';
 //import 'dart:html' as html;
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter_beautiful_popup/main.dart';
 import 'package:flutter_beautiful_popup/templates/Fail.dart';
 import 'package:flutter_beautiful_popup/templates/GreenRocket.dart';
+import './constants.dart';
 import './PlusMinusCounter.dart';
 
 void main() {
@@ -43,21 +45,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+    
+    static final String ip = Constants.ip;
+    static final String port = Constants.port;
 
-    static final String ip = "localhost";
-    static final String port = "5151";
     final String auth_url = "http://$ip:$port/socialdelivery/api/v1.0/authenticate";
     final String deploy_url = "http://$ip:$port/socialdelivery/api/v1.0/deliverepisode";
     final String get_cover_url = "http://$ip:$port/socialdelivery/api/v1.0/getcover/";
-    final String post_custom_cover_url = "http://$ip:$port/socialdelivery/api/v1.0/postcustomcover";
+    final String delete_url = "http://$ip:$port/socialdelivery/api/v1.0/deleteepisode";
 
     String FLI_fieldName = "Facebook/Instagram/Linkedin Post";
-    int FLI_maxLenght = 700-125; //il 118 è per i link a spotify ecc
+    static final FLI_fix_maxLenght = 700-55;
+    int FLI_maxLenght = FLI_fix_maxLenght;
     int FLI_MaxLines = 7;
     TextEditingController FLI_controller = new TextEditingController();
 
     String Twitter_fieldName = "Twitter Post";
-    int Twitter_maxLenght = 280-26; //13 è per [Link in BIO]
+    static final Twitter_fix_maxLenght = 280-55;
+    int Twitter_maxLenght = Twitter_fix_maxLenght;
     int Twitter_maxLines = 7;
     TextEditingController Twitter_controller = new TextEditingController();
 
@@ -75,11 +80,21 @@ class _MyHomePageState extends State<MyHomePage> {
     int episodeNumberGetCoverMaxLenght = 4;
     int episodeNumberGetCoverMaxLines = 1;
     TextEditingController episodeNumberGetCoverController = new TextEditingController();
+
+    String episodeNumberDeleteName = "Episode Number";
+    int episodeNumberDeleteLenght = 4;
+    int episodeNumberDeleteMaxLines = 1;
+    TextEditingController episodeNumberDeleteController = new TextEditingController();
     
     String passwordFieldName = "Password";
     int passwordMaxLenght = 20;
     int passwordMaxLines = 1;
     TextEditingController passwordController = new TextEditingController();
+
+    String passwordDeleteFieldName = "Password";
+    int passwordDeleteMaxLenght = 20;
+    int passwordDeleteMaxLines = 1;
+    TextEditingController passwordDeleteController = new TextEditingController();
 
     CalendarController _calendarController = CalendarController();
 
@@ -162,6 +177,16 @@ class _MyHomePageState extends State<MyHomePage> {
         });
     }
 
+    void updateMaxChars(){
+        String id = "Pointer["+episodeNumberController.text+"] ";
+        String title = titleController.text;
+        int charCount = (id+title).length;
+        setState(() {
+            FLI_maxLenght = FLI_fix_maxLenght - charCount;
+            Twitter_maxLenght = Twitter_fix_maxLenght - charCount;
+        });
+    }
+
 
     Future<http.Response> postAuth(String password){
         return http.post(
@@ -197,29 +222,19 @@ class _MyHomePageState extends State<MyHomePage> {
         );
     }
 
-    void getCover(String episodeNumber) async{
-        print(get_cover_url+episodeNumber);
-        http.Response res = await http.get(
-                get_cover_url+episodeNumber,
+    Future<http.Response> postDelete(String episodeNumber, String password){
+        return http.post(
+                delete_url,
                 headers: <String, String>{
                     'Content-Type': 'application/json; charset=UTF-8',
-                });
-        setState(() {
-                  imageCover = Image.memory(res.bodyBytes);
-                });
-        /*
-        final blob = html.Blob(res.bodyBytes);
-        final url = html.Url.createObjectUrlFromBlob(blob);
-        final anchor = html.document.createElement('a') as html.AnchorElement
-                ..href = url
-                ..style.display = 'none'
-                ..download = 'ciao_mondo.jpg';
-        html.document.body.children.add(anchor);
-        anchor.click();
-        html.document.body.children.remove(anchor);
-        html.Url.revokeObjectUrl(url);
-        */
+                },
+                body: jsonEncode(<String, String>{
+                    'episode_number' : episodeNumber,
+                    'password' : password,
+                }),
+        );
     }
+
 
     showPopupOK(context, String title, String content){
         final popupOk = BeautifulPopup(
@@ -349,7 +364,29 @@ class _MyHomePageState extends State<MyHomePage> {
         return infoMapper;
     }
 
+    void deleteEpisode(context, String episodeNumber, String password) async{
+        http.Response deleteResponse = await postDelete(episodeNumber, password);
+        var resData = jsonDecode(deleteResponse.body)['message'];
+        bool resultData = resData['result'];
+        String status = resData['status'];
+        if (resultData)
+            showPopupOK(context, "OK!", status);
+        else
+            showPopupFail(context, "Not Deleted", status);
+    }
 
+    void getCover(context, String episodeNumber) async{
+        print(get_cover_url+episodeNumber);
+        http.Response getCoverResponse = await http.get(
+                get_cover_url+episodeNumber,
+                headers: <String, String>{
+                    'Content-Type': 'application/json; charset=UTF-8',
+                });
+        Uint8List imageByteArray = getCoverResponse.bodyBytes;
+        setState(() {
+            imageCover = Image.memory(imageByteArray);
+        });
+    }
 
     void deliveryButton(context) async{
         Map infoMapper = inputFormatter();
@@ -367,14 +404,13 @@ class _MyHomePageState extends State<MyHomePage> {
             deliveryResponse = await postDelivery(infoMapper);
             var resData = jsonDecode(deliveryResponse.body)['message'];
             bool resultData = resData['result'];
-            String title = resData['title'];
-            String episodeNumber = resData['episode_number'];
+            String status = resData['status'];
             if(resultData == true)
-                showPopupOK(context, "Delivered Pointer[$episodeNumber]!", "Posts are on the way!\nPointer[$episodeNumber] $title");
+                showPopupOK(context, "Posts are on the way!", "Delivered Pointer[${infoMapper['episodeNumber']}]!");
             else
-                showPopupFail(context, "NOT DELIVERED", "Some problems occurred");
+                showPopupFail(context, "NOT DELIVERED", status);
         }else{
-            showPopupFail(context, "Failed Authentication", "Is the password correct?");
+            showPopupFail(context, "Failed Authentication", decoded['message']['status']);
         }
     }
 
@@ -436,6 +472,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                 onlyNumber: true,
                                                                 controller: episodeNumberController,
                                                                 onEditingComplete: (){
+                                                                    updateMaxChars();
                                                                     if (episodeNumberController.text.isEmpty)
                                                                         setSomethingIsEmpty(true);
                                                                     else
@@ -455,6 +492,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                 border: false,
                                                                 controller: titleController,
                                                                 onEditingComplete: (){
+                                                                    updateMaxChars();
                                                                     if (titleController.text.isEmpty)
                                                                         setSomethingIsEmpty(true);
                                                                     else
@@ -758,6 +796,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                             Padding(
                                                 padding: EdgeInsets.all(30),
                                                 child: Container(
+                                                            child: Text("Get Cover of Episode N°",
+                                                               textAlign: TextAlign.center,
+                                                               style: TextStyle(
+                                                                       color: Colors.greenAccent,
+                                                                       fontSize: 30,
+                                                                       fontWeight: FontWeight.bold,
+                                                               ),
+                                                            ),
+                                                ),
+                                            ),
+                                            Padding(
+                                                padding: EdgeInsets.all(30),
+                                                child: Container(
                                                         height: imageCover == null ? 30 : imageCover.height,
                                                         child: Center(
                                                             child:  imageCover == null
@@ -794,7 +845,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                 child: RaisedButton(
                                                                         textColor: Colors.white,
                                                                         color : Colors.blueAccent,
-                                                                        onPressed: () => getCover(episodeNumberGetCoverController.text),
+                                                                        onPressed: () => getCover(context, episodeNumberGetCoverController.text),
                                                                         child: Text("Get Cover",
                                                                                        style: TextStyle(
                                                                                                fontSize: 20,
@@ -806,6 +857,91 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     ),
                                         ]
                                     ),
+                                    Container(
+                                            height: 10,
+                                            width: double.infinity,
+                                            color: Colors.redAccent
+                                    ),
+
+                                    Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                            Padding(
+                                                padding: EdgeInsets.all(30),
+                                                child: Container(
+                                                            child: Text("Delete Episode / Unschedule",
+                                                               textAlign: TextAlign.center,
+                                                               style: TextStyle(
+                                                                       color: Colors.greenAccent,
+                                                                       fontSize: 30,
+                                                                       fontWeight: FontWeight.bold,
+                                                               ),
+                                                            ),
+                                                ),
+                                            ),
+                                        ]
+                                    ),
+                                    Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                                    Flexible(
+                                                            flex: 1,
+                                                            child:  Padding(
+                                                                padding: EdgeInsets.all(50),
+                                                                child: SocialDeliveryTextField(
+                                                                    fieldName: episodeNumberDeleteName,
+                                                                    maxLength: episodeNumberDeleteLenght,
+                                                                    maxLines: episodeNumberDeleteMaxLines,
+                                                                    border: false,
+                                                                    onlyNumber: true,
+                                                                    controller: episodeNumberDeleteController,
+                                                                    onEditingComplete: (){
+                                                                        if (episodeNumberDeleteController.text.isEmpty)
+                                                                            setSomethingIsEmpty(true);
+                                                                        else
+                                                                            setSomethingIsEmpty(false);
+                                                                    }
+                                                                ),
+                                                            ),
+                                                    ),
+                                                    Flexible(
+                                                            flex: 2,
+                                                            child: Container(
+                                                                width: 300,
+                                                                child: Padding(
+                                                                    padding: EdgeInsets.all(50),
+                                                                    child: SocialDeliveryTextField(
+                                                                        fieldName: passwordDeleteFieldName,
+                                                                        maxLength: passwordDeleteMaxLenght,
+                                                                        maxLines: passwordMaxLines,
+                                                                        border: false,
+                                                                        onlyNumber: false,
+                                                                        controller: passwordDeleteController,
+                                                                        onEditingComplete: (){
+                                                                            if (passwordDeleteController.text.isEmpty)
+                                                                                setSomethingIsEmpty(true);
+                                                                            else
+                                                                                setSomethingIsEmpty(false);
+                                                                        }
+                                                                    ),
+                                                                ),
+                                                            ),
+                                                    ),
+                                                    Padding(
+                                                        padding: EdgeInsets.all(20),
+                                                        child: RaisedButton(
+                                                                textColor: Colors.white,
+                                                                color : Colors.redAccent,
+                                                                onPressed: () => deleteEpisode(context, episodeNumberDeleteController.text, passwordDeleteController.text),
+                                                                child: Text("Delete Episode",
+                                                                               style: TextStyle(
+                                                                                       fontSize: 20,
+                                                                               )
+                                                                        ),
+                                                            ),
+                                                    ),
+                                                ]
+                                            ),
                                 ],
                         ),
                     ),
@@ -940,6 +1076,7 @@ class _SocialDeliveryTextFieldState extends State<SocialDeliveryTextField>{
                             TextFormField(
                                     maxLength: widget.maxLength,
                                     controller: widget.controller,
+                                    onEditingComplete: widget.onEditingComplete,
                                     decoration: InputDecoration(
                                             isDense: true,
                                             border:  widget.border ?

@@ -8,6 +8,7 @@ import numpy as np
 from PIL import Image
 from datetime import date
 from threading import Thread
+from config_file import IP, PORT
 
 from flask import Flask
 from flask import request
@@ -28,15 +29,19 @@ def index():
     return "Welcome!"
 
 
-@app.route('/socialdelivery/api/v1.0/deleteepisode', methods=['PUT'])
+@app.route('/socialdelivery/api/v1.0/deleteepisode', methods=['POST'])
 def delete_episode_by_number():
     episode_number = request.json['episode_number']
-    res, status = delete_episode(episode_number)
+    password = request.json['password']
+    res, status = authenticate(password)
+    if res : 
+        res, status = delete_episode(episode_number)
     message = {
         'result' : res,
         'status' : status,
     }
     response = jsonify({'message':message})
+
     if res == True:
         return response, 200
     else:
@@ -45,7 +50,7 @@ def delete_episode_by_number():
 
 @app.route('/socialdelivery/api/v1.0/getcover/<episode_number>', methods=['GET'])
 def get_cover(episode_number):
-    data = get_cover_of_episode(episode_number)
+    _, data = get_cover_of_episode(episode_number)
     return data
 
 @app.route('/socialdelivery/api/v1.0/authenticate', methods=['POST'])
@@ -77,7 +82,7 @@ def deliver_episode():
     custom_cover_data = request.json.get('custom_cover_data', None)
     custom_cover_name = request.json.get('custom_cover_name', None)
 
-    res = deploy_episode(episode_number,
+    res, status = deploy_episode(episode_number,
                          episode_name,
                          post_facebook_linkedin_instagram,
                          post_twitter,
@@ -91,9 +96,8 @@ def deliver_episode():
                          )
 
     episode = {
-        'episode_number' : episode_number,
-        'title' : episode_name,
-        'result' : res
+        'result' : res,
+        'status' : status
     }
     response = jsonify({'message':episode})
     if res == True:
@@ -104,5 +108,5 @@ def deliver_episode():
 
 
 if __name__ == '__main__':
-    app.run(host='62.171.188.29', port=5150)
+    app.run(host=IP, port=PORT)
 
