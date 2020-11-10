@@ -16,7 +16,7 @@ class PP_instagram:
         if PP_instagram.__instance__ is None:
             PP_instagram.__instance__ = self
             self._bot = instabot.Bot()
-            credentials = token.split(',')
+            credentials = token.strip().split(',')
             try:
                 self._bot.login(
                     username = credentials[0],

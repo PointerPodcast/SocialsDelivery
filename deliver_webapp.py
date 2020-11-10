@@ -22,6 +22,7 @@ from PPSocials.PPfacebook import PP_facebook
 from PPSocials.PPinstagram import PP_instagram
 from PPSocials.PPtwitter import PP_twitter
 from PPSocials.PPtelegram import PP_telegram
+from PPSocials.PPlinkedin import PP_linkedin
 
 
 logging.basicConfig(filename='socialDelivery.log', filemode='a', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
@@ -52,7 +53,8 @@ socialToClass = {
     'facebook' : PP_facebook,
     'instagram' : PP_instagram,
     'twitter' : PP_twitter,
-    'telegram' : PP_telegram
+    'telegram' : PP_telegram,
+    'linkedin' : PP_linkedin
 }
 
 post_font = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf'
@@ -290,7 +292,8 @@ def deploy_episode(episode_number,
          )
 
         logging.info("Episode Scheduled on: "+date+' '+time)
-        scheduler.run(blocking=False)
+        #scheduler.run(blocking=True)
+        scheduler.run()
 
         #publish(episode_number, episode_dir, cover_file, social_instances)
 

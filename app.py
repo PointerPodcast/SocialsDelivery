@@ -50,6 +50,7 @@ def delete_episode_by_number():
 
 @app.route('/socialdelivery/api/v1.0/getcover/<episode_number>', methods=['GET'])
 def get_cover(episode_number):
+    print("Get Cover")
     _, data = get_cover_of_episode(episode_number)
     return data
 

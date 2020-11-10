@@ -15,7 +15,7 @@ class PP_facebook:
         if PP_facebook.__instance__ is None:
             PP_facebook.__instance__ = self
             try:
-                self._graph = facebook.GraphAPI(access_token=token)
+                self._graph = facebook.GraphAPI(access_token=token.strip())
                 print(" > Facebook: Authentication OK")
             except:
                 print(" > Facebook: unable to login.")

@@ -2,6 +2,7 @@ import base64
 from cryptography.fernet import Fernet
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
+from pathlib import Path
 import json
 
 
@@ -11,14 +12,16 @@ def get_key(password):
     return base64.urlsafe_b64encode(digest.finalize())
 
 def encrypt_and_store():
+    access_tokens_dir = './../access_tokens/'
+    Path(access_tokens_dir).mkdir(parents=True, exist_ok=True)
     password = None
     token = None
-    file_name = None
+    social_name = None
 
     try: 
         password = input("Enter Encryption Password: ")
         token = input("What to encrypt: ").encode()
-        file_name = input("Where to store: ")
+        social_name = input("Name of the social: ")
     except EOFError:
         print("EOFError")
 
@@ -26,7 +29,7 @@ def encrypt_and_store():
     encrypted = fernet.encrypt(token)
 
     #Store to file
-    f = open(file_name, 'wb')
+    f = open(access_tokens_dir+social_name+'.enc', 'wb')
     f.write(encrypted)
     f.close
 

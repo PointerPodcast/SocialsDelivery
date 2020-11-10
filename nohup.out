@@ -30,3 +30,154 @@ ModuleNotFoundError: No module named 'PIL'
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "./app.py", line 111, in <module>
+    app.run(host=IP, port=PORT)
+  File "/home/alessandro/SocialsDelivery/venv/lib/python3.8/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/alessandro/SocialsDelivery/venv/lib/python3.8/site-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/home/alessandro/SocialsDelivery/venv/lib/python3.8/site-packages/werkzeug/serving.py", line 996, in inner
+    srv = make_server(
+  File "/home/alessandro/SocialsDelivery/venv/lib/python3.8/site-packages/werkzeug/serving.py", line 847, in make_server
+    return ThreadedWSGIServer(
+  File "/home/alessandro/SocialsDelivery/venv/lib/python3.8/site-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app2.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+python3: can't open file './app2.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 57
+    'linkedin' : PP_linkedin
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 25, in <module>
+    from PPSocials.PPlinkedin import PP_linkedin
+  File "/home/alessandro/SocialsDelivery/PPSocials/PPlinkedin.py", line 67
+    json=register_data)
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 25, in <module>
+    from PPSocials.PPlinkedin import PP_linkedin
+  File "/home/alessandro/SocialsDelivery/PPSocials/PPlinkedin.py", line 1, in <module>
+    from linkedin import linkedin
+ModuleNotFoundError: No module named 'linkedin'
+Traceback (most recent call last):
+  File "./app.py", line 17, in <module>
+    from deliver_webapp import deploy_episode
+  File "/home/alessandro/SocialsDelivery/deliver_webapp.py", line 25, in <module>
+    from PPSocials.PPlinkedin import PP_linkedin
+  File "/home/alessandro/SocialsDelivery/PPSocials/PPlinkedin.py", line 3, in <module>
+    class PP_linkedin:
+  File "/home/alessandro/SocialsDelivery/PPSocials/PPlinkedin.py", line 17, in PP_linkedin
+    'Authorization': 'Bearer ' + access_token
+NameError: name 'access_token' is not defined
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2020-11-10 00:59:03,227 - INFO - Instabot version: 0.117.0 Started
+2020-11-10 00:59:03,229 - INFO - Recovery from /home/alessandro/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE False - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=bfa516aa-2ebe-421e-89fe-b0034df92ea3
+- uuid=69483143-810b-43bd-8cb5-85858a1a6216
+- client_session_id=345b88c2-734a-4ab9-be0e-5bcea5f13d19
+- device_id=android-3a990627032d92c4
+2020-11-10 00:59:03,230 - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2020-11-10 00:59:06,569 - INFO - Logged-in successfully as 'pointerpodcast'!
+2020-11-10 00:59:06,569 - INFO - LOGIN FLOW! Just logged-in: True
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2020-11-10 01:06:07,063 - INFO - Instabot version: 0.117.0 Started
+2020-11-10 01:06:07,064 - INFO - Recovery from /home/alessandro/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE False - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=bfa516aa-2ebe-421e-89fe-b0034df92ea3
+- uuid=69483143-810b-43bd-8cb5-85858a1a6216
+- client_session_id=345b88c2-734a-4ab9-be0e-5bcea5f13d19
+- device_id=android-3a990627032d92c4
+2020-11-10 01:06:07,064 - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2020-11-10 01:06:09,948 - INFO - Logged-in successfully as 'pointerpodcast'!
+2020-11-10 01:06:09,948 - INFO - LOGIN FLOW! Just logged-in: True
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2020-11-10 01:08:57,399 - INFO - Instabot version: 0.117.0 Started
+2020-11-10 01:08:57,400 - INFO - Recovery from /home/alessandro/SocialsDelivery/config/pointerpodcast_uuid_and_cookie.json: COOKIE False - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=bfa516aa-2ebe-421e-89fe-b0034df92ea3
+- uuid=69483143-810b-43bd-8cb5-85858a1a6216
+- client_session_id=345b88c2-734a-4ab9-be0e-5bcea5f13d19
+- device_id=android-3a990627032d92c4
+2020-11-10 01:08:57,400 - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2020-11-10 01:09:00,105 - INFO - Logged-in successfully as 'pointerpodcast'!
+2020-11-10 01:09:00,105 - INFO - LOGIN FLOW! Just logged-in: True
+2020-11-10 01:09:36,572 - INFO - Photo '/home/alessandro/SocialsDelivery/episodes/0/cover_0.jpg' is uploaded.
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off

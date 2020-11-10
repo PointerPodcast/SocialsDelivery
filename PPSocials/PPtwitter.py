@@ -9,7 +9,7 @@ class PP_twitter:
     def __init__(self, token):
         if PP_twitter.__instance__ is None:
             PP_twitter.__instance__ = self
-            credentials = token.split(',')
+            credentials = token.strip().split(',')
             auth = tweepy.OAuthHandler(credentials[0], credentials[1])
             auth.set_access_token(credentials[2], credentials[3])
             self._api = tweepy.API(auth)

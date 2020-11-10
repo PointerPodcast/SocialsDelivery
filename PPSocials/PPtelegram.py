@@ -10,7 +10,7 @@ class PP_telegram:
     def __init__(self, token):
         if PP_telegram.__instance__ is None:
             PP_telegram.__instance__ = self
-            credentials = token.split(',')
+            credentials = token.strip().split(',')
             try:
                 self._bot = telegram.Bot(token=credentials[0])
                 self._chat_id = credentials[1]

@@ -1,0 +1,8 @@
+Pointer[0] SocialDelivery
+
+1 post N socials
+   - SocialDelivery
+
+Spotify: spoti.fi/3eAW0lG
+
+ApplePodcast: apple.co/3exnGHU
