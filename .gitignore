@@ -1,1 +1,5 @@
 venv/
+access_tokens/
+config/
+**nohup.out
+**__pycache__/
