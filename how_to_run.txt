@@ -1,2 +1,8 @@
-nohup python -m http.server 5151 --bind "pointerpodcast.it" &
-nohup python3 ./app.py
+cd /home/web
+nohup python3 -m http.server 5151 --bind "pointerpodcast.it" &
+nohup python3 /home/app.py &
+
+docker run -p 5151:5151 -d -it socialdelivery
+docker cp ./access_tokens <container_id>:home
+docker exec -it <container_id> sh
+

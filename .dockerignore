@@ -1,0 +1,8 @@
+SocialDeliveryWebApp/
+how_to_request_token/
+.dockerignore
+Dockerfile
+access_tokens/*
+build.sh
+socialDelivery.log
+nohup.out

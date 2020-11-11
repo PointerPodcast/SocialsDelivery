@@ -267,6 +267,25 @@ class _MyHomePageState extends State<MyHomePage> {
         );
     }
 
+    showCustomAlert(context, String title, String content){
+        Widget okButton = FlatButton(
+            child: Text("OK"),
+            onPressed: () => Navigator.of(context).pop,
+        );
+        AlertDialog alert = AlertDialog(
+            title: Text(title),
+            content: Text(content),
+            actions: [
+              okButton,
+            ],
+        );
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return alert;
+            },
+        );
+    }
 
     Map inputFormatter(){ 
         Map infoMapper = new Map();
@@ -401,12 +420,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     infoMapper['custom_cover_name'] = platformFile.name;
                     infoMapper['custom_cover_data'] = platformFile.bytes;
             }
+            showPopupOK(context, "Posts are on the way!", "Wait or Trust in God");
             deliveryResponse = await postDelivery(infoMapper);
             var resData = jsonDecode(deliveryResponse.body)['message'];
             bool resultData = resData['result'];
             String status = resData['status'];
             if(resultData == true)
-                showPopupOK(context, "Posts are on the way!", "Delivered Pointer[${infoMapper['episodeNumber']}]!");
+                showPopupOK(context, "Posts have been deliverd!", "Delivered Pointer[${infoMapper['episode_number']}]!");
             else
                 showPopupFail(context, "NOT DELIVERED", status);
         }else{

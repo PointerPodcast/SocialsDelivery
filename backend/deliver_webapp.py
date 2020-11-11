@@ -30,11 +30,11 @@ logging.basicConfig(filename='socialDelivery.log', filemode='a', format='%(name)
 MAX_POST_CHARS = 700 #lower_bound linkedin
 MAX_POST_CHARS_TWITTER = 280
 
-ACCESS_TOKEN_PATH = './access_tokens'
+ACCESS_TOKEN_PATH = '/home/backend/access_tokens'
 
-EPISODES_PATH = './episodes'
+EPISODES_PATH = '/home/backend/episodes'
 
-COVER_TEMPLATES_PATH = './cover_templates'
+COVER_TEMPLATES_PATH = '/home/backend/cover_templates'
 
 content_types = ['post', 'story']
 
@@ -57,7 +57,7 @@ socialToClass = {
     'linkedin' : PP_linkedin
 }
 
-post_font = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf'
+post_font = './fonts/UbuntuMono-B.ttf'
 pointing_hand_short_code = '👉'
 
 
